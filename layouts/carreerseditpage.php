@@ -193,7 +193,7 @@
                     <a href="/borisveins">Dashboard</a>
                 </li>
                 <li class="breadcrumb-item">
-                    <a href="https://hrbuzzstaffing.com/borisveins/manage-careers">All Career</a>
+                    <a href="https://asdsad.com/borisveins/manage-careers">All Career</a>
                 </li>
 
             </ul>
@@ -314,7 +314,7 @@ if (mysqli_num_rows($result)>0){
                             <td>30-Nov-2020 06:19 AM</td>
                             <td>
                                 <div class="btn-group">
-                                    <a href="https://hrbuzzstaffing.com/borisveins/manage-careers/view/32"
+                                    <a href="https://asdsad.com/borisveins/manage-careers/view/32"
                                         class="btn btn-outline-primary" title="View Vacancy Detail">
                                         <i class="fa fa-eye"></i>
                                     </a>

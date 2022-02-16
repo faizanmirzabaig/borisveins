@@ -1,5 +1,8 @@
 <?php
 
+include_once 'const.php';
+
+$base_url = BASE_URL;
 
     $etitle = $_POST['title'];
     $epost = $_POST['posting'];
@@ -9,6 +12,7 @@
 
     $estatus=$_POST['status'];
     $id=$_POST['id'];
+
    
    
     // $conn = mysqli_connect('localhost','root', '', 'borisveins');
@@ -18,7 +22,7 @@ include 'localhostcon.php';
     $sql="UPDATE careers SET title='{$etitle}',posting='{$epost}',no_of_vacancy='{$evac}',description='{$edesc}',status='{$estatus}' WHERE id={$id} ";
     $result=mysqli_query($conn,$sql) or die ('unsucessfull query');
 
-    header('Location:http://s-borisveins.com.sanjaresolutions.com/layouts/carreerspage.php');
+    header('Location:$base_url/layouts/carreerspage.php');
     mysqli_close($conn);    
 
 

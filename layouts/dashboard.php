@@ -26,10 +26,10 @@ if ($conn->connect_error) {
     
     if (mysqli_num_rows($result)>0) {
         
-        header("Location:$base_url/dashboard.php");
+        header("Location:$base_url/layouts/dashboard.php");
         } 
      else {
-        header("Location:$base_url/dashboard.php");
+        header("Location:$base_url/layouts/dashboard.php");
 
     }
     die('i m here');
@@ -210,9 +210,9 @@ if ($conn->connect_error) {
                                             <a href="carreerspage.php">
                                                 <span class="pcoded-mtext">Careers</span>
                                             </a>
-                                            <a href="carreerspage.php">
+                                            <!-- <a href="carreerspage.php">
                                                 <span class="pcoded-mtext">Careers</span>
-                                            </a>
+                                            </a> -->
                                         </li>
                                         <!-- <li class="">
                                             <a href="/borisveins/direct-resume">
