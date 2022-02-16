@@ -60,89 +60,75 @@
       </form>
     </div>
     <!--start navbar-->
-  <!--start navbar-->
-  <div class="bar-bottom">
-        <div class="container customcontainer">
-          <nav class="menu-navbar">
-            <div class="header-logo" id="header">
-              <!-- <a class="logo-link" href="#"><img class="logo-img light-logo" src="assets/Images/logo/logo-light.png" alt="logo"/><img class="logo-img  dark-logo" src="assets/Images/logo/logo-dark.png" alt="logo"/></a> -->
-              <!-- logo start here -->
-              <a href="#">
-                <img
-                  src="assets/img/boris_logo.png"
-                 
-                  class="ml-3"
-                  style="margin-right: 10px;max-height: unset;     margin-top: -14px;
-                  "
-                  alt
-                />
-              </a>
-              <a
-                href="index.html"
-                style="
+    <!--start navbar-->
+    <div class="bar-bottom">
+      <div class="container customcontainer">
+        <nav class="menu-navbar">
+          <div class="header-logo" id="header">
+            <!-- <a class="logo-link" href="#"><img class="logo-img light-logo" src="assets/Images/logo/logo-light.png" alt="logo"/><img class="logo-img  dark-logo" src="assets/Images/logo/logo-dark.png" alt="logo"/></a> -->
+            <!-- logo start here -->
+            <a href="#">
+              <img src="assets/img/boris_logo.png" class="ml-3" style="margin-right: 10px;max-height: unset;     margin-top: -14px;
+                  " alt />
+            </a>
+            <a href="index.html" style="
                   color: white;
                   margin-left: -2px;
                   font-family: 'Raleway', sans-serif;
-                "
-                >Boris
-                <span
-                  class="headerspan"
-                  style="font-family: 'Raleway', sans-serif"
-                  >veins</span
-                ></a
-              >
-              <!-- logo end here -->
-            </div>
-            <div class="links menu-wrapper">
-              <ul class="list-js links-list">
-                <li class="menu-item has-sub-menu">
-                  <a class="menu-link " href="index.html">home </a>
-                </li>
-                <li class="menu-item has-sub-menu">
-                  <a class="menu-link active" href="about-us.html">about us</a>
-                </li>
-                <li class="menu-item has-sub-menu">
-                  <a class="menu-link" href="services.html">services</a>
-                </li>
+                ">Boris
+              <span class="headerspan" style="font-family: 'Raleway', sans-serif">veins</span></a>
+            <!-- logo end here -->
+          </div>
+          <div class="links menu-wrapper">
+            <ul class="list-js links-list">
+              <li class="menu-item has-sub-menu">
+                <a class="menu-link " href="index.html">home </a>
+              </li>
+              <li class="menu-item has-sub-menu">
+                <a class="menu-link active" href="about-us.html">about us</a>
+              </li>
+              <li class="menu-item has-sub-menu">
+                <a class="menu-link" href="services.html">services</a>
+              </li>
 
-                <li class="menu-item has-sub-menu">
-                  <a class="menu-link" href="careers.php">careers</a>
-                </li>
+              <li class="menu-item has-sub-menu">
+                <a class="menu-link" href="careers.php">careers</a>
+              </li>
 
-                <li class="menu-item">
-                  <a class="menu-link" href="contact-us.html">contact us </a>
-                </li>
-              </ul>
+              <li class="menu-item">
+                <a class="menu-link" href="contact-us.html">contact us </a>
+              </li>
+            </ul>
+          </div>
+          <div class="controls-box">
+            <div class="control info-toggler">
+              <span> </span><span> </span><span></span>
             </div>
-            <div class="controls-box">
-              <div class="control info-toggler">
-                <span> </span><span> </span><span></span>
-              </div>
-              <div class="control menu-toggler">
-                <span></span><span></span><span></span>
-              </div>
+            <div class="control menu-toggler">
+              <span></span><span></span><span></span>
             </div>
-          </nav>
-        </div>
+          </div>
+        </nav>
       </div>
-      <!--End navbar-->
+    </div>
+    <!--End navbar-->
     <!--End navbar-->
   </header>
   <!--End Page Header-->
-   <!-- social media icon start here -->
-   <div style=" position: fixed;bottom: 24%;right: 3.3%;z-index: 20000;">
-      <a href="tel:+918130882662">
+  <!-- social media icon start here -->
+  <div style=" position: fixed;bottom: 24%;right: 3.3%;z-index: 20000;">
+    <a href="tel:+918130882662">
       <img src="assets/img/phone.png" alt="call us" style="width:45px; height:45px">
     </a>
-    </div>
+  </div>
 
-    <div class="data" id="data">
-      <a href="https://wa.me/+918130882662">
-        <img src="assets/img/whatsapp.svg" alt width="45px" style="width: 45px;">
-      </a>
-    </div>
+  <div class="data" id="data">
+    <a href="https://wa.me/+918130882662">
+      <img src="assets/img/whatsapp.svg" alt width="45px" style="width: 45px;">
+    </a>
+  </div>
 
-    <!-- social media end here -->
+  <!-- social media end here -->
 
   <!-- Start inner Page hero-->
   <section class="d-flex align-items-center page-hero hero-vegas-slider inner-page-hero" id="page-hero">
@@ -174,13 +160,13 @@
   <section class="benefits" id="benefits" style="background-color: rgba(0,0,0,0.4) ;padding-top: 0px; z-index:unset;
        padding-bottom: 39px;
 ">
-<div class="overlay-bgabout parallax"></div>
+    <div class="overlay-bgabout parallax"></div>
 
     <div class="container applycontainer">
       <div class="row">
         <div class="col-md-12">
           <div class="single-job-content">
-            <div class="area-title text-center" >
+            <div class="area-title text-center">
               <!-- <h2>You have almost finished</h2> -->
               <div class="title uppercase pt-70 pb-26" style="text-align: left;">
                 <span>JOB DESCRIPTION</span>
@@ -196,59 +182,63 @@
               </div>
               <div class="single-job-form">
                 <p>
-                <i class="fa fa-check check" aria-hidden="true"></i> <span class="check_pcolor">  Some form,t the my have suffered alteration in some form,andomised wo</span>
+                  <i class="fa fa-check check" aria-hidden="true"></i> <span class="check_pcolor"> Some form,t the my have suffered alteration in some form,andomised wo</span>
                 </p>
 
                 <p>
-                <i class="fa fa-check check" aria-hidden="true"></i> <span class="check_pcolor">  believable.available, but the majority have sufferederation in some</span>
- </span>               </p>
+                  <i class="fa fa-check check" aria-hidden="true"></i> <span class="check_pcolor"> believable.available, but the majority have sufferederation in some</span>
+                  </span>
+                </p>
 
                 <p></span>
-                <i class="fa fa-check check" aria-hidden="true"></i> <span class="check_pcolor">  There are many variations of passages of Lorem Ipsum available, but</span>
- </span>               </p>
-
-                <p>
-                <i class="fa fa-check check" aria-hidden="true"></i> <span class="check_pcolor">  Some form,t the my have suffered alteration in some form,andomised wo</span>
+                  <i class="fa fa-check check" aria-hidden="true"></i> <span class="check_pcolor"> There are many variations of passages of Lorem Ipsum available, but</span>
+                  </span>
                 </p>
 
                 <p>
-                <i class="fa fa-check check" aria-hidden="true"></i> <span class="check_pcolor">  believable.available, but the majority have sufferederation in some</span>
- </span>               </p>
+                  <i class="fa fa-check check" aria-hidden="true"></i> <span class="check_pcolor"> Some form,t the my have suffered alteration in some form,andomised wo</span>
+                </p>
 
                 <p>
-                <i class="fa fa-check check" aria-hidden="true"></i> <span class="check_pcolor">  There are many variations of passages of Lorem Ipsum available, but</span>
- </span>               </p>
+                  <i class="fa fa-check check" aria-hidden="true"></i> <span class="check_pcolor"> believable.available, but the majority have sufferederation in some</span>
+                  </span>
+                </p>
+
+                <p>
+                  <i class="fa fa-check check" aria-hidden="true"></i> <span class="check_pcolor"> There are many variations of passages of Lorem Ipsum available, but</span>
+                  </span>
+                </p>
               </div>
 
 
               <div class="title uppercase pb-26" style="text-align: left; padding-top: 30px;">
                 <span>JOB REQUIREMENTS
 
-</span>
+                </span>
               </div>
               <div class="single-job-form">
                 <p>
-                <i class="apply_check" >1 .</i> <span  class="apply_check_pcolor"> Some form,t the my have suffered alteration in some form,andomised </span>words
+                  <i class="apply_check">1 .</i> <span class="apply_check_pcolor"> Some form,t the my have suffered alteration in some form,andomised </span>words
                 </p>
 
                 <p>
-                <i class="apply_check" >2 .</i> <span class="apply_check_pcolor"> believable.available, but the majority have sufferederation in some</span>
+                  <i class="apply_check">2 .</i> <span class="apply_check_pcolor"> believable.available, but the majority have sufferederation in some</span>
                 </p>
 
                 <p>
-                <i class="apply_check" >3 .</i> <span class="apply_check_pcolor"> There are many variations of passages of Lorem Ipsum available, but</span>
+                  <i class="apply_check">3 .</i> <span class="apply_check_pcolor"> There are many variations of passages of Lorem Ipsum available, but</span>
                 </p>
 
                 <p>
-                <i class="apply_check" >4 .</i> <span class="apply_check_pcolor"> Some form,t the my have suffered alteration in some form,andomised words </span>
+                  <i class="apply_check">4 .</i> <span class="apply_check_pcolor"> Some form,t the my have suffered alteration in some form,andomised words </span>
                 </p>
 
                 <p>
-                <i class="apply_check" >5 .</i> <span class="apply_check_pcolor"> believable.available, but the majority have sufferederation in some</span>
+                  <i class="apply_check">5 .</i> <span class="apply_check_pcolor"> believable.available, but the majority have sufferederation in some</span>
                 </p>
 
                 <p>
-                <i class="apply_check" >6 .</i> <span class="apply_check_pcolor"> There are many variations of passages of Lorem Ipsum available, but</span>
+                  <i class="apply_check">6 .</i> <span class="apply_check_pcolor"> There are many variations of passages of Lorem Ipsum available, but</span>
                 </p>
               </div>
 
@@ -256,18 +246,18 @@
 
               <div class="title uppercase  pb-26" style="text-align: left; padding-top: 30px;">
                 <span>UPLOAD RESUME
-</span>
+                </span>
               </div>
               <div class="single-job-form">
-         <!-- <p>There are many variations of passages of Lorem Ipsum available, but the my have suffered alteration in some form, by injected humour, or randomised words which don't loven</p>
+                <!-- <p>There are many variations of passages of Lorem Ipsum available, but the my have suffered alteration in some form, by injected humour, or randomised words which don't loven</p>
              
          <div class="mt-38" style="text-align: left;">
          <a href="#" class="button button-large-box lg-btn mr-20">Back</a>
          <a href="#" class="button button-large-box lg-btn mr-20">Upload Resume</a>
 
          </div> -->
-        </div>
-              
+              </div>
+
 
             </div>
           </div>
@@ -315,19 +305,28 @@
             <div class="social-icons">
               <div class="sc-wrapper dir-row sc-size-32">
               <ul class="sc-list">
-                  <li class="sc-item" title="Facebook">
-                    <a class="sc-link" href="https://www.facebook.com/borisveins/"><i class="fab fa-facebook-f sc-icon"></i></a>
-                  </li>
-                  <!-- <li class="sc-item" title="youtube">
-                    <a class="sc-link" href="#0"><i class="fab fa-youtube sc-icon"></i></a>
-                  </li> -->
-                  <li class="sc-item" title="instagram">
-                    <a class="sc-link" href="https://www.instagram.com/borisveins/"><i class="fab fa-instagram sc-icon"></i></a>
-                  </li>
-                  <!-- <li class="sc-item" title="twitter">
+                    <li class="sc-item" title="youtube">
+                      <a class="sc-link" href="https://www.linkedin.com/company/borisveins/"><i class="fab fa-linkedin sc-icon"></i></a>
+                    </li>
+                    <li class="sc-item" title="Facebook">
+                      <a
+                        class="sc-link"
+                        href="https://www.facebook.com/borisveins/"
+                        ><i class="fab fa-facebook-f sc-icon"></i
+                      ></a>
+                    </li>
+                  
+                    <li class="sc-item" title="instagram">
+                      <a
+                        class="sc-link"
+                        href="https://www.instagram.com/borisveins/"
+                        ><i class="fab fa-instagram sc-icon"></i
+                      ></a>
+                    </li>
+                    <!-- <li class="sc-item" title="twitter">
                     <a class="sc-link" href="#0"><i class="fab fa-twitter sc-icon"></i></a>
                   </li> -->
-                </ul>
+                  </ul>
               </div>
             </div>
           </div>
@@ -385,10 +384,10 @@
             </div>
             <div class="contact-info-card">
               <i class="fas fa-map-marker-alt icon"></i><span class=" info">N 45 Ground Floor
-Abul Fazal Enclave Part 1 Jamia 
+                Abul Fazal Enclave Part 1 Jamia
 
                 <span style="display: block">
-                Nagar Okhla New Delhi 110025, India.</span></span>
+                  Nagar Okhla New Delhi 110025, India.</span></span>
             </div>
             <div class="contact-info-card">
               <i class="fas fa-mobile-alt icon"></i>
@@ -422,7 +421,7 @@ Abul Fazal Enclave Part 1 Jamia
             <!--  Designed by <a href="https://sanjaresolutions.com/" style="color: #3EC1D5;">Sanjar E Solutions</a>-->
 
 
-              <!-- <a class="link" href="#0">sanjaresolutions</a> -->
+            <!-- <a class="link" href="#0">sanjaresolutions</a> -->
             <!--</p>-->
           </div>
           <div class="col-12 col-md-6">

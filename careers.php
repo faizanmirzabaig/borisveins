@@ -468,20 +468,29 @@ $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
             </p>
             <div class="social-icons">
               <div class="sc-wrapper dir-row sc-size-32">
-                <ul class="sc-list">
-                  <li class="sc-item" title="Facebook">
-                    <a class="sc-link" href="https://www.facebook.com/borisveins/"><i class="fab fa-facebook-f sc-icon"></i></a>
-                  </li>
-                  <!-- <li class="sc-item" title="youtube">
-                    <a class="sc-link" href="#0"><i class="fab fa-youtube sc-icon"></i></a>
-                  </li> -->
-                  <li class="sc-item" title="instagram">
-                    <a class="sc-link" href="https://www.instagram.com/borisveins/"><i class="fab fa-instagram sc-icon"></i></a>
-                  </li>
-                  <!-- <li class="sc-item" title="twitter">
+              <ul class="sc-list">
+                    <li class="sc-item" title="youtube">
+                      <a class="sc-link" href="https://www.linkedin.com/company/borisveins/"><i class="fab fa-linkedin sc-icon"></i></a>
+                    </li>
+                    <li class="sc-item" title="Facebook">
+                      <a
+                        class="sc-link"
+                        href="https://www.facebook.com/borisveins/"
+                        ><i class="fab fa-facebook-f sc-icon"></i
+                      ></a>
+                    </li>
+                  
+                    <li class="sc-item" title="instagram">
+                      <a
+                        class="sc-link"
+                        href="https://www.instagram.com/borisveins/"
+                        ><i class="fab fa-instagram sc-icon"></i
+                      ></a>
+                    </li>
+                    <!-- <li class="sc-item" title="twitter">
                     <a class="sc-link" href="#0"><i class="fab fa-twitter sc-icon"></i></a>
                   </li> -->
-                </ul>
+                  </ul>
               </div>
             </div>
           </div>
