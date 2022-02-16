@@ -271,6 +271,7 @@
       </div>
       <!-- modal-body  start here -->
       <div class="modal-body">
+        <form action="upload_resume.php">
         <div class="row">
           <div class="col-sm-6">
             <label>
@@ -346,6 +347,7 @@
           </div>
 
         </div>
+        </form>
 
       </div>
       <!-- modal-body  end here -->
