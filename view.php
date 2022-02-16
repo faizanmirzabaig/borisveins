@@ -266,19 +266,19 @@
     <!-- Modal content -->
     <div class="modal-content">
       <div class="modal-header">
-        <h2>Apply Jobs </h2>
+        <h2 >Apply Jobs </h2>
         <span class="close">&times;</span>
       </div>
       <!-- modal-body  start here -->
       <div class="modal-body">
-        <form action="upload_resume.php">
+        <form action="uploadresume.php" method="POST">
         <div class="row">
           <div class="col-sm-6">
             <label>
               Your Name (required)
               <br>
               <span class="wpcf7-form-control-wrap your-name">
-                <input type="text" name="your-name" value size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
+                <input type="text" placeholder="Enter Your Name" name="name" value size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
               </span>
             </label>
           </div>
@@ -287,7 +287,7 @@
               Your Experience
               <br>
               <span class="wpcf7-form-control-wrap your-name">
-                <input type="text" name="your-name" value size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
+                <input type="text" name="experience" placeholder="Enter Your Experience" value size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
               </span>
             </label>
           </div>
@@ -299,7 +299,7 @@
               Contact Number (required)
               <br>
               <span class="wpcf7-form-control-wrap your-name">
-                <input type="text" name="your-name" value size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
+                <input type="text" name="contact" value size="40" placeholder="Enter Your Contact" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
               </span>
             </label>
           </div>
@@ -308,7 +308,7 @@
               Your Email
               <br>
               <span class="wpcf7-form-control-wrap your-name">
-                <input type="text" name="your-name" value size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
+                <input type="text" name="email" value size="40" placeholder="Enter Your Email" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
 
               </span>
             </label>
@@ -321,7 +321,7 @@
               Your Message
               <br>
               <span class="wpcf7-form-control-wrap your-name">
-                <textarea name="your-message" cols="40" rows="5" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Your cover letter/message to send to the employer"></textarea>
+                <textarea name="message" cols="40" rows="5" placeholder="Enter Your Message" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Your cover letter/message to send to the employer"></textarea>
               </span>
             </label>
           </div>
@@ -334,7 +334,7 @@
               Upload Resume
               <br>
               <span class="wpcf7-form-control-wrap your-name">
-                <input type="file">
+                <input type="file" name="resume">
               </span>
             </label>
           </div>
