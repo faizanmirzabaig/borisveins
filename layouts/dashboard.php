@@ -8,12 +8,7 @@ if($_POST){
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-// $conn = new mysqli('localhost', 'root', '', 'borisveins');
-
-// $conn = mysqli_connect('localhost', 'sanjares_borisveins', 'OzW2MIEp8y?v', 'sanjares_borisveins');
 include 'localhostcon.php';
-
-
 
 if ($conn->connect_error) {
     die('connection failed');
@@ -31,10 +26,10 @@ if ($conn->connect_error) {
     
     if (mysqli_num_rows($result)>0) {
         
-        header("Location:/borisveins/layouts/as.php");
+        header("Location:$base_url/dashboard.php");
         } 
      else {
-        header("Location:/borisveins/layouts/dashboard.php");
+        header("Location:$base_url/dashboard.php");
 
     }
     die('i m here');

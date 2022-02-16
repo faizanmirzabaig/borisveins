@@ -1,4 +1,4 @@
 <?php 
-define('BASE_URL', 'http://borisveins.com')
+define('BASE_URL', '/borisveins/layouts/dashboard.php')
 
 ?>
