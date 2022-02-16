@@ -404,9 +404,9 @@
                   <li class="sc-item" title="instagram">
                     <a class="sc-link" href="https://www.instagram.com/borisveins/"><i class="fab fa-instagram sc-icon"></i></a>
                   </li>
-                  <!-- <li class="sc-item" title="twitter">
-                    <a class="sc-link" href="#0"><i class="fab fa-twitter sc-icon"></i></a>
-                  </li> -->
+                  <li class="sc-item" title="twitter">
+                    <a class="sc-link" href="https://twitter.com/boris_veins"><i class="fab fa-twitter sc-icon"></i></a>
+                  </li>
                 </ul>
               </div>
             </div>
