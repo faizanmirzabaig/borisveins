@@ -42,6 +42,9 @@
 
   <!-- main-LTR -->
   <link rel="stylesheet" href="assets/css/main-LTR.css" />
+  <!-- modal start here -->
+  <link rel="stylesheet" href="assets/css/modal.css" />
+
 </head>
 
 <body class="dark-theme rounded-btns" style="background-color: #121212;">
@@ -245,17 +248,9 @@
 
 
               <div class="title uppercase  pb-26" style="text-align: left; padding-top: 30px;">
-                <span>UPLOAD RESUME
+                <span id="myBtn">UPLOAD RESUME
                 </span>
-              </div>
-              <div class="single-job-form">
-                <!-- <p>There are many variations of passages of Lorem Ipsum available, but the my have suffered alteration in some form, by injected humour, or randomised words which don't loven</p>
-             
-         <div class="mt-38" style="text-align: left;">
-         <a href="#" class="button button-large-box lg-btn mr-20">Back</a>
-         <a href="#" class="button button-large-box lg-btn mr-20">Upload Resume</a>
 
-         </div> -->
               </div>
 
 
@@ -264,10 +259,102 @@
         </div>
       </div>
     </div>
-
-
-
   </section>
+
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Apply Jobs </h2>
+        <span class="close">&times;</span>
+      </div>
+      <!-- modal-body  start here -->
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-6">
+            <label>
+              Your Name (required)
+              <br>
+              <span class="wpcf7-form-control-wrap your-name">
+                <input type="text" name="your-name" value size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
+              </span>
+            </label>
+          </div>
+          <div class="col-sm-6">
+            <label>
+              Your Experience
+              <br>
+              <span class="wpcf7-form-control-wrap your-name">
+                <input type="text" name="your-name" value size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <label>
+              Contact Number (required)
+              <br>
+              <span class="wpcf7-form-control-wrap your-name">
+                <input type="text" name="your-name" value size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
+              </span>
+            </label>
+          </div>
+          <div class="col-sm-6">
+            <label>
+              Your Email
+              <br>
+              <span class="wpcf7-form-control-wrap your-name">
+                <input type="text" name="your-name" value size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
+
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12">
+            <label>
+              Your Message
+              <br>
+              <span class="wpcf7-form-control-wrap your-name">
+                <textarea name="your-message" cols="40" rows="5" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Your cover letter/message to send to the employer"></textarea>
+              </span>
+            </label>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12">
+            <label>
+              Upload Resume
+              <br>
+              <span class="wpcf7-form-control-wrap your-name">
+                <input type="file">
+              </span>
+            </label>
+          </div>
+
+        </div>
+
+        <div class="row"  style="margin-top:20px ;">
+          <div class="col-sm-12">
+            <input type="submit" value="Apply Now" class="wpcf7-form-control wpcf7-submit formbtn">
+          </div>
+
+        </div>
+
+      </div>
+      <!-- modal-body  end here -->
+
+     
+    </div>
+
+  </div>
+  <!-- modal end here -->
 
 
 
@@ -304,29 +391,21 @@
             </p>
             <div class="social-icons">
               <div class="sc-wrapper dir-row sc-size-32">
-              <ul class="sc-list">
-                    <li class="sc-item" title="youtube">
-                      <a class="sc-link" href="https://www.linkedin.com/company/borisveins/"><i class="fab fa-linkedin sc-icon"></i></a>
-                    </li>
-                    <li class="sc-item" title="Facebook">
-                      <a
-                        class="sc-link"
-                        href="https://www.facebook.com/borisveins/"
-                        ><i class="fab fa-facebook-f sc-icon"></i
-                      ></a>
-                    </li>
-                  
-                    <li class="sc-item" title="instagram">
-                      <a
-                        class="sc-link"
-                        href="https://www.instagram.com/borisveins/"
-                        ><i class="fab fa-instagram sc-icon"></i
-                      ></a>
-                    </li>
-                    <!-- <li class="sc-item" title="twitter">
+                <ul class="sc-list">
+                  <li class="sc-item" title="youtube">
+                    <a class="sc-link" href="https://www.linkedin.com/company/borisveins/"><i class="fab fa-linkedin sc-icon"></i></a>
+                  </li>
+                  <li class="sc-item" title="Facebook">
+                    <a class="sc-link" href="https://www.facebook.com/borisveins/"><i class="fab fa-facebook-f sc-icon"></i></a>
+                  </li>
+
+                  <li class="sc-item" title="instagram">
+                    <a class="sc-link" href="https://www.instagram.com/borisveins/"><i class="fab fa-instagram sc-icon"></i></a>
+                  </li>
+                  <!-- <li class="sc-item" title="twitter">
                     <a class="sc-link" href="#0"><i class="fab fa-twitter sc-icon"></i></a>
                   </li> -->
-                  </ul>
+                </ul>
               </div>
             </div>
           </div>
@@ -467,6 +546,10 @@
 
   <!--     main     -->
   <script src="assets/js/main.js"></script>
+
+  <!-- modal js -->
+  <script src="assets/js/modal.js"></script>
+
 </body>
 
 <!-- Mirrored from flexcode.xyz/BorisVeins/about-us.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Jan 2022 08:56:12 GMT -->
