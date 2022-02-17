@@ -472,6 +472,8 @@ footer a {
 .single-job-form p{
     text-align: left;
     color: #fff;
+    line-height: 27px;
+
 }
 .pb-26 {
     padding-bottom: 26px;
@@ -624,6 +626,11 @@ Media Query Start Herer
         height: 1661px;
         margin-bottom: 0px;
     }
+    .single-job-content {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+   
 }
 @media(max-width:992px){
     .single-well ul li {
@@ -641,6 +648,10 @@ Media Query Start Herer
     }
     .services_bg_size {
         height: 3080px;
+    }
+    .single-job-content {
+        padding-left: 0px;
+        padding-right: 0px;
     }
 }
 @media(max-width:876px){
@@ -712,7 +723,12 @@ Media Query Start Herer
         padding: 0px 0px 0px 18px;
 
     }
-   
+    .apply_check{
+        padding: 19px 0px 4px 0px;
+
+
+    }
+  
 
   
 }

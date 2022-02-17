@@ -260,7 +260,7 @@ if ($conn->connect_error) {
                         </div>
                     </div>
                     <div class="card-footer">
-                        <a href="http://hrbuzzstaffing.com/borisveins/manage-admins" class="text-white" title="View Details">
+                        <a href="dashboard.php" class="text-white" title="View Details">
                             View Details <i class="fa fa-angle-double-right"></i>
                         </a>
                     </div>

@@ -1,54 +1,93 @@
 <?php
-//Import PHPMailer classes into the global namespace
-//These must be at the top of your script, not inside a function
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
+
+//Load Composer's autoloader
+require 'vendor/autoload.php';
 
 //Load Composer's autoloader
 require 'vendor/phpmailer/phpmailer/src/PHPMailer.php';
 require 'vendor/phpmailer/phpmailer/src/Exception.php';
 require 'vendor/phpmailer/phpmailer/src/SMTP.php';
 
+//Create a new PHPMailer instance
+$mail = new PHPMailer();
+
+$mail->SMTPDebug = 1;
+$mail->Host = "mail.borisveins.com";
+
+$mail->Port = 587;
+$mail->IsHTML(true);
+
+//Set who the message is to be sent from
+$mail->setFrom('mirzaasdasd@gmail.com', 'Faizan');
+
+//Set an alternative reply-to address
+// $mail->addReplyTo('replyto@gmail.com', 'Secure Developer');
+
+//Set who the message is to be sent to
+$mail->addAddress('mirzafaizan1931@gmail.com', 'faizan');
+$mail->addAddress('Sanjaresolutions@gmail.com', 'farzana mam');
+
+//Set the subject line
+$mail->Subject = 'PHPMailer SMTP test';
+//Read an HTML message body from an external file, convert referenced images to embedded,
+
+//convert HTML into a basic plain-text alternative body
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+     $name="$_POST[name]";
+    $experience=" $_POST[experience]";
+    $contact=" $_POST[contact]";
+    $email="$_POST[email] ";
+    $message="$_POST[message]";
+    $html = "  
+    <table style='width: 100%;border: 2px solid black;border-collapse: collapse;'>
+           <tr style='width: 100%;border: 2px solid black;'>
+           <th style='width: 20%;border: 2px solid black;'>Name</th>
+           <th style='width: 20%;border: 2px solid black;'>Experience</th>
+           <th style='width: 20%;border: 2px solid black;'>Contact Number</th>
+           <th style='width: 20%;border: 2px solid black;'>Email</th>
+           <th style='width: 20%;border: 2px solid black;'>Message</th>
+        </tr>
+        <tr style='width: 100%;border: 2px solid black;'>
+            <th style='width: 20%;border: 2px solid black;'>$name</th>
+            <th style='width: 20%;border: 2px solid black;'>$experience</th>
+            <th style='width: 20%;border: 2px solid black;'>$contact</th>
+            <th style='width: 20%;border: 2px solid black;'>$email</th>
+            <th style='width: 20%;border: 2px solid black;'>$message</th>
+        </tr>
+       </table>";
+    $msgHtml = "$name $experience $contact $email $message";
+$mail->msgHTML($html);
+
+}
+
+//Replace the plain text body with one created manually
+$mail->AltBody = 'This is a plain-text message body';
 
 
-extract($_POST);
+// add attachment
+if ($_POST) {
+    // die($_POST);
+    $path = 'upload/' . $_FILES["resume"]["name"];
+    move_uploaded_file($_FILES["resume"]["tmp_name"], $path);
+    // var_dump($_POST);
+    var_dump($path);
+   
+    
+    $mail->AddAttachment($path);
+    var_dump($path,$name,$experience,$contact,$email,$message);
+    // die('$name');
+}
 
 
-//Create an instance; passing `true` enables exceptions
-$mail = new PHPMailer(true);
-
-try {
-    //Server settings
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
-    $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
-    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'mirzafaizan1931@gmail.com';                     //SMTP username
-    $mail->Password   = '7304094851';                               //SMTP password
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-    $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
-
-    //Recipients
-    $mail->setFrom('mirzafaizan1931@gmail.com', 'faizan');
-    $mail->addAddress($name,$experience,$contact,$email,$message,$resume);     //Add a recipient
-    // $mail->addAddress('ellen@example.com');               //Name is optional
-    // $mail->addReplyTo('info@example.com', 'Information');
-    // $mail->addCC('cc@example.com');
-    // $mail->addBCC('bcc@example.com');
-
-    //Attachments
-    // $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
-    // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
-
-    //Content
-    $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Jobs';
-    $mail->Body    = 'Sanjares_e_solutions';
-    // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-
-    $mail->send();
-    echo 'Message has been sent';
-} catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+//send the message, check for errors
+if (!$mail->send()) {
+    header("Location:view.php");
+} else {
+    header("Location:messagesent.html");
 }
