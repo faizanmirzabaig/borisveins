@@ -163,6 +163,9 @@ $result = $conn->query("SELECT * from careers");
                                             <a href="carreerspage.php">
                                                 <span class="pcoded-mtext">Careers</span>
                                             </a>
+                                            <a href="Views/ViewPage.php">
+                                                <span class="pcoded-mtext">Views</span>
+                                            </a>
                                         </li>
                                         <!-- <li class="">
                                             <a href="/borisveins/direct-resume">
@@ -264,6 +267,7 @@ $result = $conn->query("SELECT * from careers");
                                                     <li class="breadcrumb-item">
                                                         <a href="#addModal" data-toggle="modal" data-target="#addModal">Add Career</a>
                                                     </li>
+                                                    
                                                 </ul>
                                             </div>
                                         </div>

@@ -1,6 +1,6 @@
 <?php
 
-include_once 'const.php';
+include_once '../const.php';
 
 $base_url = BASE_URL;
 // echo $base_url;
@@ -8,7 +8,7 @@ if($_POST){
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-include 'localhostcon.php';
+include '../localhostcon.php';
 
 if ($conn->connect_error) {
     die('connection failed');
@@ -68,16 +68,16 @@ if ($conn->connect_error) {
     <meta name="keywords"
         content="Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
     <meta name="author" content="#">
-    <link rel="icon" type="image/png" href="/assets/images/logo/favicon.ico" />
+    <link rel="icon" type="image/png" href="../assets/images/logo/favicon.ico" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/feather.css">
-    <link rel="stylesheet" type="text/css" href="css/style2.css">
-    <link rel="stylesheet" type="text/css" href="css/custom.css">
-    <link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css">
-    <link rel="stylesheet" href="summernote/summernote-bs4.css">
-    <link rel="stylesheet" href="css/datepicker.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/feather.css">
+    <link rel="stylesheet" type="text/css" href="../css/style2.css">
+    <link rel="stylesheet" type="text/css" href="../css/custom.css">
+    <link rel="stylesheet" type="text/css" href="../css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="../summernote/summernote-bs4.css">
+    <link rel="stylesheet" href="../css/datepicker.css">
 
     </head>
 
@@ -129,8 +129,8 @@ if ($conn->connect_error) {
                         <a class="mobile-menu" id="mobile-collapse" href="#">
                             <i class="feather icon-menu"></i>
                         </a>
-                        <a href="/borisveins" class="bg-white pl-4 pt-2 pb-2 pr-4">
-                            <img class="img-fluid mt-1" src="image/boris_logo.png" alt="HR BUZZ STAFFING" width="100px" />
+                        <a href="../borisveins" class="bg-white pl-4 pt-2 pb-2 pr-4">
+                            <img class="img-fluid mt-1" src="../image/boris_logo.png" alt="HR BUZZ STAFFING" width="100px" />
                         </a>
                         <a class="mobile-options">
                             <i class="feather icon-more-horizontal"></i>
@@ -148,7 +148,7 @@ if ($conn->connect_error) {
                             <li class="user-profile header-notification">
                                 <div class="dropdown-primary dropdown">
                                     <div class="dropdown-toggle" data-toggle="dropdown">
-                                                                                <img src="image/boris_logo.png"
+                                                                                <img src="../image/boris_logo.png"
                                             alt="borisveins ADMIN"
                                             class="img img-responsive img-circle" width="200px !important">
                                                                                 <span>borisveins ADMIN</span>
@@ -187,7 +187,7 @@ if ($conn->connect_error) {
                             <div class="pcoded-navigatio-lavel">Manage Menu</div>
                             <ul class="pcoded-item pcoded-left-item navbar-item">
                                 <li class="">
-                                    <a href="dashboard.php">
+                                    <a href="../dashboard.php">
                                         <span class="pcoded-micon"><i class="fa fa-home"></i></span>
                                         <span class="pcoded-mtext">Dashboard</span>
                                     </a>
@@ -207,10 +207,10 @@ if ($conn->connect_error) {
                                     </a>
                                     <ul class="pcoded-submenu">
                                         <li class="">
-                                            <a href="carreerspage.php">
+                                            <a href="../carreerspage.php">
                                                 <span class="pcoded-mtext">Careers</span>
                                             </a>
-                                            <a href="Views/ViewPage.php">
+                                            <a href="../Views/ViewPage.php">
                                                 <span class="pcoded-mtext">Views</span>
                                             </a>
                                         </li>
@@ -281,19 +281,19 @@ if ($conn->connect_error) {
         </div>
     </div>
 
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="js/popper.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/jquery.slimscroll.js"></script>
-    <script type="text/javascript" src="js/modernizr.js"></script>
-    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script type="text/javascript" src="js/SmoothScroll.js"></script>
-    <script src="js/pcoded.min.js"></script>
-    <script src="js/vartical-layout.min.js"></script>
-    <script type="text/javascript" src="js/script.min.js"></script>
-    <script src="summernote-bs4.js"></script>
-    <script src="js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../js/popper.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.slimscroll.js"></script>
+    <script type="text/javascript" src="../js/modernizr.js"></script>
+    <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../js/SmoothScroll.js"></script>
+    <script src="../js/pcoded.min.js"></script>
+    <script src="../js/vartical-layout.min.js"></script>
+    <script type="text/javascript" src="../js/script.min.js"></script>
+    <script src="../summernote-bs4.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
 
     <script>
         $(document).ready(function () {
