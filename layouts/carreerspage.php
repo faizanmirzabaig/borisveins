@@ -88,7 +88,7 @@ $result = $conn->query("SELECT * from careers");
                             <i class="feather icon-menu"></i>
                         </a>
                         <a href="/borisveins" class="bg-white pl-4 pt-2 pb-2 pr-4">
-                            <img class="img-fluid mt-1" src="image/boris_logo.png" alt="HR BUZZ STAFFING" width="100px" />
+                            <img class="img-fluid mt-1" src="image/boris_logo.png" alt="Borisveins" width="100px" />
                         </a>
                         <a class="mobile-options">
                             <i class="feather icon-more-horizontal"></i>

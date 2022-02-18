@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Update Career | Borisveins</title>
+    <title>Update Views | Borisveins</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
@@ -15,14 +15,14 @@
     <link rel="icon" type="image/png" href="/assets/images/logo/favicon.ico" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/feather.css">
-    <link rel="stylesheet" type="text/css" href="css/style2.css">
-    <link rel="stylesheet" type="text/css" href="css/custom.css">
-    <link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/feather.css">
+    <link rel="stylesheet" type="text/css" href="../css/style2.css">
+    <link rel="stylesheet" type="text/css" href="../css/custom.css">
+    <link rel="stylesheet" type="text/css" href="../css/jquery.mCustomScrollbar.css">
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/datepicker.css">
+    <link rel="stylesheet" href="../css/datepicker.css">
 
     </head>
 
@@ -213,7 +213,7 @@ if ($conn->connect_error) {
 } 
 
 $cus_id=$_GET['id'];
-$sql="SELECT * FROM careers WHERE id={$cus_id} ";
+$sql="SELECT * FROM views WHERE id={$cus_id} ";
 $result=mysqli_query($conn,$sql) or die('query unsuccessfull');
 if (mysqli_num_rows($result)>0){
     foreach ($result as $row){
@@ -353,19 +353,19 @@ if (mysqli_num_rows($result)>0){
         </div>
     </div>
 
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="js/popper.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/jquery.slimscroll.js"></script>
-    <script type="text/javascript" src="js/modernizr.js"></script>
-    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script type="text/javascript" src="js/SmoothScroll.js"></script>
-    <script src="js/pcoded.min.js"></script>
-    <script src="js/vartical-layout.min.js"></script>
-    <script type="text/javascript" src="js/script.min.js"></script>
-    <script src="summernote-bs4.js"></script>
-    <script src="js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../js/popper.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.slimscroll.js"></script>
+    <script type="text/javascript" src="../js/modernizr.js"></script>
+    <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../js/SmoothScroll.js"></script>
+    <script src="../js/pcoded.min.js"></script>
+    <script src="../js/vartical-layout.min.js"></script>
+    <script type="text/javascript" src="../js/script.min.js"></script>
+    <script src="../summernote-bs4.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
 
     <script>
         $(document).ready(function () {

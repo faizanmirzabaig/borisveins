@@ -58,7 +58,7 @@ if ($conn->connect_error) {
 
 <head>
 
-    <title>Dashboard | Boris Veins</title>
+    <title>Dashboard | Borisveins</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
@@ -129,7 +129,7 @@ if ($conn->connect_error) {
                             <i class="feather icon-menu"></i>
                         </a>
                         <a href="/borisveins" class="bg-white pl-4 pt-2 pb-2 pr-4">
-                            <img class="img-fluid mt-1" src="image/boris_logo.png" alt="HR BUZZ STAFFING" width="100px" />
+                            <img class="img-fluid mt-1" src="image/boris_logo.png" alt="Borisveins" width="100px" />
                         </a>
                         <a class="mobile-options">
                             <i class="feather icon-more-horizontal"></i>

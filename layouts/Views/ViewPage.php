@@ -1,52 +1,17 @@
+<!-- @extends('layouts.admin-master')
+@section('title', 'Manage Careers')
+@section('content') -->
+
 <?php
 
-include_once '../const.php';
 
-$base_url = BASE_URL;
-// echo $base_url;
-if($_POST){
-$email = $_POST['email'];
-$password = $_POST['password'];
 
+// Create a connection
+// $conn = mysqli_connect("localhost", "root", "", "borisveins");
+// $conn = mysqli_connect('localhost', 'sanjares_borisveins', 'OzW2MIEp8y?v', 'sanjares_borisveins');
 include '../localhostcon.php';
 
-if ($conn->connect_error) {
-    die('connection failed');
-} else {
-
-
-    // $statement = $conn->prepare("select * from admins where email=? AND password=?");
-    // $statement->bind_param('ss', $email,$password);
-    // $statement->execute();
-    // $statement_result = $statement->get_result();
-    $query="select * from admins where username='".$email."' AND password='".$password."'";
-    $result=mysqli_query($conn,$query);
-    // $row=mysqli_fetch_array($result);
-    
-    
-    if (mysqli_num_rows($result)>0) {
-        
-        header("Location:$base_url/layouts/dashboard.php");
-        } 
-     else {
-        header("Location:$base_url/layouts/dashboard.php");
-
-    }
-    die('i m here');
-}
-
-
-    
-
-
-    // $statement=$conn->prepare("successfully login(email,password) values(?,?)");
-    //    $statement->bind_param($email,$password);
-    //  $statement->execute();
-    //  echo "login successfully";
-    //  $statement->close();
-    //  $conn->close(); 
-
-}
+$result = $conn->query("SELECT * from views");
 
 
 
@@ -58,17 +23,11 @@ if ($conn->connect_error) {
 <html lang="en">
 
 <head>
-
-    <title>Dashboard | Boris Veins</title>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="#">
-    <meta name="keywords"
-        content="Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
-    <meta name="author" content="#">
-    <link rel="icon" type="image/png" href="../assets/images/logo/favicon.ico" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ViewsPage Borisveins</title>
+    <link rel="icon" type="image/png" href="/assets/images/logo/favicon.ico" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
@@ -76,13 +35,12 @@ if ($conn->connect_error) {
     <link rel="stylesheet" type="text/css" href="../css/style2.css">
     <link rel="stylesheet" type="text/css" href="../css/custom.css">
     <link rel="stylesheet" type="text/css" href="../css/jquery.mCustomScrollbar.css">
-    <link rel="stylesheet" href="../summernote/summernote-bs4.css">
-    <link rel="stylesheet" href="../css/datepicker.css">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
 
-    </head>
+    <link rel="stylesheet" href="../css/datepicker.css">
+</head>
 
 <body>
-
     <div class="theme-loader">
         <div class="ball-scale">
             <div class='contain'>
@@ -129,8 +87,8 @@ if ($conn->connect_error) {
                         <a class="mobile-menu" id="mobile-collapse" href="#">
                             <i class="feather icon-menu"></i>
                         </a>
-                        <a href="../borisveins" class="bg-white pl-4 pt-2 pb-2 pr-4">
-                            <img class="img-fluid mt-1" src="../image/boris_logo.png" alt="HR BUZZ STAFFING" width="100px" />
+                        <a href="/borisveins" class="bg-white pl-4 pt-2 pb-2 pr-4">
+                            <img class="img-fluid mt-1" src="../image/boris_logo.png" alt="Borisveins" width="100px" />
                         </a>
                         <a class="mobile-options">
                             <i class="feather icon-more-horizontal"></i>
@@ -148,14 +106,12 @@ if ($conn->connect_error) {
                             <li class="user-profile header-notification">
                                 <div class="dropdown-primary dropdown">
                                     <div class="dropdown-toggle" data-toggle="dropdown">
-                                                                                <img src="../image/boris_logo.png"
-                                            alt="borisveins ADMIN"
-                                            class="img img-responsive img-circle" width="200px !important">
-                                                                                <span>borisveins ADMIN</span>
+                                        <img src="../image/boris_logo.png" alt="" class="img img-responsive img-circle" width="200px !important">
+
+                                        <span>borisveins ADMIN</span>
                                         <i class="feather icon-chevron-down"></i>
                                     </div>
-                                    <ul class="show-notification profile-notification dropdown-menu"
-                                        data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                    <ul class="show-notification profile-notification dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
                                         <li>
                                             <a href="/borisveins/profile">
                                                 <i class="feather icon-user"></i> Profile
@@ -163,14 +119,11 @@ if ($conn->connect_error) {
                                         </li>
 
                                         <li>
-                                            <a href="../admin.php"
-                                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
-                                                title="Logout">
+                                            <a href="../admin.php" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" title="Logout">
                                                 <i class="feather icon-log-out"></i> Logout
                                             </a>
-                                            <form id="logout-form" action="../admin.php" method="POST"
-                                                style="display: none;">
-                                                <input type="hidden" name="_token" value="q9Tz4sFjuCzJWYsavwbyix4PlNLD4tEZ0uoukOtB">                                            </form>
+                                            <form id="logout-form" action="../admin.php" method="POST" style="display: none;">
+                                            </form>
                                         </li>
                                     </ul>
                                 </div>
@@ -180,7 +133,7 @@ if ($conn->connect_error) {
                 </div>
             </nav>
 
-            <div class="pcoded-main-container">
+            <div class="pcoded-main-container" style="margin-top: 0px !important;    min-height: calc(0vh - 0px); ">
                 <div class="pcoded-wrapper">
                     <nav class="pcoded-navbar">
                         <div class="pcoded-inner-navbar main-menu">
@@ -192,9 +145,9 @@ if ($conn->connect_error) {
                                         <span class="pcoded-mtext">Dashboard</span>
                                     </a>
                                 </li>
-                               
-                                <li class="">
-                                    <!-- <a href="/borisveins/manage-admins">
+
+                                <!-- <li class="">
+                                    <a href="/borisveins/manage-admins">
                                         <span class="pcoded-micon"><i class="fa fa-user"></i></span>
                                         <span class="pcoded-mtext">Manage Admin</span>
                                     </a>
@@ -232,46 +185,192 @@ if ($conn->connect_error) {
                             </ul>
                         </div>
                     </nav>
-                    <div class="pcoded-content">
-                        <div class="pcoded-inner-content">
-                            <div class="main-body">
-                                <div class="page-wrapper">
 
-                                    <div class="content-wrapper">
-                                                                                  <div class="page-body">
-                                            <div class="card borderless-card">
-    <div class="card-block inverse-breadcrumb">
-        <div class="breadcrumb-header">
-            <h5>Administrative Dashboard</h5>
-        </div>
-    </div>
-</div>
-
-<div class="card">
-    <div class="card-body">
-        <div class="row">
-            <div class="col-md-4 mb-3">
-                <div class="bg">
-                    <div class="card-body"><span class="info-box-icon bg-transparent">
-                        <i class="fa fa-users fa-fw fa-2x theme-color"></i></span>
-                        <div class="info-box-content">
-                            <h6 class="info-box-text text-dark"> No of Administrative</h6>
-                            <h1 class="text-dark">1</h1>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="dashboard.php" class="text-white" title="View Details">
-                            View Details <i class="fa fa-angle-double-right"></i>
-                        </a>
-                    </div>
                 </div>
             </div>
-            
         </div>
     </div>
-</div>
+
+
+    <!-- <div class="page-body"> -->
+    <div class="pcoded-main-container" style="margin-top: 0px !important;    min-height: calc(0vh - 0px); ">
+        <div class="pcoded-wrapper">
+            <div class="pcoded-content" style="margin-left: 240px;">
+                <div class="pcoded-inner-content">
+                    <div class="main-body">
+                        <div class="page-wrapper">
+                            <div class="content-wrapper">
+                                <div class="page-body">
+
+                                    <div class="modal" id="addModal">
+                                        <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <div class="modal-header bg-primary">
+                                                    <h3 class="modal-title text-light">Add Career</h3>
+                                                    <button type="button" class="close text-light" data-dismiss="modal">&times;</button>
+                                                </div>
+
+                                                <form method="POST" role="form" class="form" action="viewmodaldata.php">
+                                                    <div class="modal-body">
+                                                        <div class="row">
+
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label for="title">Job Description</label>
+                                                                    <input type="text" name="Job_Desc_title" id="title" class="form-control" value="" placeholder="Enter Title" required>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label for="description">Job Description</label>
+                                                                    <textarea name="Job_Desc" id="description" class="form-control summernote" rows="5" placeholder="Write Something here..." required></textarea>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label for="posting">Benefits</label>
+                                                                    <input type="text" name="Bene_title" id="posting" class="form-control" value="" placeholder="Enter Post" required>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label for="description">Benefits Description</label>
+                                                                    <textarea name="Bene_Desc" id="description" class="form-control summernote" rows="5" placeholder="Write Something here..." required></textarea>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label for="no_of_vacancy">Job Requiremnts</label>
+                                                                    <input type="text" name="Job_Req_title" id="no_of_vacancy" class="form-control" value="" placeholder="Enter No of Vacancy" min="0" max="100" maxlength="3" required>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label for="description">Job Requiremnts Description</label>
+                                                                    <textarea name="Job_Req_Desc" id="description" class="form-control summernote" rows="5" placeholder="Write Something here..." required></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="submit" class="btn btn-primary update_button"> <i class="fa fa-plus"></i>
+                                                            Submit</button>
+                                                    </div>
+                                                </form>
+
+                                            </div>
                                         </div>
                                     </div>
+
+
+                                    <div class="card borderless-card">
+                                        <div class="card-block inverse-breadcrumb">
+                                            <div class="breadcrumb-header">
+                                                <h5>Manage Careers</h5>
+                                            </div>
+                                            <div class="page-header-breadcrumb">
+                                                <ul class="breadcrumb-title">
+                                                    <li class="breadcrumb-item">
+                                                        <a href="../connect.php">Dashboard</a>
+                                                    </li>
+                                                    <li class="breadcrumb-item">
+                                                        <a href="#addModal" data-toggle="modal" data-target="#addModal">Add Career</a>
+                                                    </li>
+                                                    
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card">
+                                        <div class="card-block">
+                                            <div class="table-responsive dt-responsive">
+                                                <table id="dom-jqry" class="table table-striped table-bordered nowrap">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>#</th>
+                                                            <th>Job Description Title</th>
+                                                            <th>Job Description</th>
+                                                            <th>Benefits Title</th>
+                                                            <th>Benefits Description</th>
+                                                            <th>Job Requirements title </th>
+                                                            <th>Job Requirements Description</th>
+
+                                                            <th>Status</th>
+                                                            <th>Added On</th>
+                                                            <th>Action</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <?php foreach ($result as $row) { ?>
+                                                            <tr>
+                                                                <td><?php echo $row['id']; ?></td>
+                                                                <td> <?php echo $row['Job_Desc_title']; ?></td>
+                                                                <td> <?php echo $row['Job_Desc']; ?> </td>
+                                                                <td><?php echo $row['Bene_title']; ?></td>
+
+                                                                                              
+                                                                <td> <?php echo $row['Bene_Desc']; ?></td>
+                                                                <td> <?php echo $row['Job_Req_title']; ?> </td>
+                                                                <td><?php echo $row['Job_Req_Desc']; ?></td>
+
+                                                                <td><?php echo $row['status']==0 ? 'Deactivated':'Activated'?></td>
+                                                                      
+                                                                <td><?php echo $row['Created_at']; ?></td> 
+                                                                <td>
+                                                                    <div class="btn-group">
+
+                                                                        <a href="editViewPage.php?id=<?php echo $row['id']; ?>" class="btn btn-outline-primary" title="Edit Career">
+                                                                            <i class="fa fa-edit"></i>
+                                                                        </a>
+                                                                        <!-- <a href="deletecarreerspage.php?id=<?php echo $row['id']; ?>" class="btn btn-outline-danger delete-object">
+                                                                        <i class="fa fa-trash"></i>
+                                                                        </a> -->
+                                                                        <button type="button" class="btn btn-outline-danger delete-object" title="Delete Career" data-obj-id=<?php echo $row['id']; ?>>
+                                                                            <i class="fa fa-trash"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        <?php   }  ?>
+
+
+                                                        <?php if ($result->num_rows == 0) {  ?>
+                                                            <tr class="text-center">
+                                                                <td class="text-danger" colspan="8">
+                                                                    <h4>No Record Found..</h4>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="text-center">
+                                                                <td colspan="7">
+                                                                </td>
+                                                            </tr>
+                                                        <?php } ?>
+                                                    </tbody>
+                                                    <tfoot>
+                                                        <tr>
+                                                        <th>#</th>
+                                                            <th>Job Description Title</th>
+                                                            <th>Job Description</th>
+                                                            <th>Benefits Title</th>
+                                                            <th>Benefits Description</th>
+                                                            <th>Job Requirements title </th>
+                                                            <th>Job Requirements Description</th>
+
+                                                            <th>Status</th>
+                                                            <th>Added On</th>
+                                                            <th>Action</th>
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
                                 </div>
                             </div>
                         </div>
@@ -280,6 +379,10 @@ if ($conn->connect_error) {
             </div>
         </div>
     </div>
+    <form id="formDelete" method="POST" action="/borisveins/manage-careers/delete/">
+    </form>
+
+
 
     <script type="text/javascript" src="../js/jquery.min.js"></script>
     <script type="text/javascript" src="../js/jquery-ui.min.js"></script>
@@ -295,29 +398,9 @@ if ($conn->connect_error) {
     <script src="../summernote-bs4.js"></script>
     <script src="../js/bootstrap-datepicker.js"></script>
 
+
     <script>
-        $(document).ready(function () {
-            $('.form').submit(function () {
-                $('.update_button').attr('disabled', 'disabled');
-                $('.update_button').html('Please Wait...');
-            });
-
-            setTimeout(function () {
-                $(".content-msg").fadeOut(1500);
-            }, 10000);
-
-            var hrf = $(location).attr('pathname');
-            $('.navbar-item > li > a[href="' + hrf + '"]').parent().addClass("pcoded-trigger");
-
-            $('.date').datepicker({
-                format: 'dd-mm-yyyy',
-                autoclose: true,
-                todayBtn: true,
-                showClear: true,
-                todayHighlight: 'TRUE'
-            });
-        });
-        $('.summernote').summernote({
+         $('.summernote').summernote({
             height: 250,
             minHeight: null,
             maxHeight: null,
@@ -331,8 +414,88 @@ if ($conn->connect_error) {
                 ['height', ['height']]
             ]
         });
+        
+        $(document).ready(function() {
+            $(document).scroll(function() {
+                if ($(document).scrollTop() > 20) {
+                    $("#btp").fadeIn();
+                } else {
+                    $("#btp").fadeOut(0);
+                }
+            });
+        });
 
+
+        jQuery(document).ready(function() {
+            jQuery("#frcontact").submit(function(e) {
+                e.preventDefault();
+                $("#sendEnquiryModal").attr("disabled", "disabled");
+                $("#sendEnquiryModal").html("Sending ...");
+                var form = jQuery('#frcontact').serialize();
+                var settings = {
+                    "url": "/contact-us",
+                    "method": "post",
+                    "data": form
+                };
+                jQuery.ajax(settings).done(function(response, statusText, xhr) {
+                    jQuery('#name').val('');
+                    jQuery('#email').val('');
+                    jQuery('#mobile').val('');
+                    jQuery('#msg').val('');
+                    // jQuery('#frcontact').fadeOut('fast');
+                    jQuery("#ajax_contact_msg").html(
+
+                        '<div class="alert alert-success m-t-20"><button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">×</span> </button><h3 class="text-success text-center">' +
+                        xhr.responseJSON[1] +
+                        '</h3></div>'
+                    );
+
+                }).fail(function(xhr, statusText) {
+                    var errors = xhr.responseJSON[1];
+                    if (xhr.status == 403) {
+                        jQuery("#ajax_contact_msg").html(
+                            '<div class="alert alert-danger m-t-20"><button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">×</span> </button>Only ajax requests are allowed !</div>'
+                        );
+                    } else if (xhr.status == 400) {
+                        var strError = "";
+
+                        strError += "<ul>";
+                        errors.forEach(function(error) {
+                            strError += "<li>" + error + "</li>";
+                        });
+                        strError += "</ul>";
+                        jQuery("#ajax_contact_msg").html(
+                            '<div class="alert alert-danger m-t-10"><button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">×</span> </button>' +
+                            strError + '</div>');
+                    } else {
+                        console.log(errors);
+                        jQuery("#ajax_contact_msg").html(
+                            '<div class="alert alert-danger m-t-10"><button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">×</span> </button>Something went wrong !</div>'
+                        );
+                    }
+                }).always(function() {
+                    $("#sendEnquiryModal").removeAttr("disabled");
+                    $("#sendEnquiryModal").html("SUBMIT");
+                });
+            });
+        });
+
+
+        $(document).ready(function() {
+            $(".delete-object").click(function() {
+                if (window.confirm("Are you sure, You want to Delete ? ")) {
+                    var careerId = $(this).attr("data-obj-id");
+                    window.location = `deletecarreerspage.php?id=${careerId}`;
+                    // var action = $("#formDelete").attr("action") + $(this).attr("data-obj-id");
+                    // $("#formDelete").attr("action", action);
+                    // $("#formDelete").submit();
+                    // $(this).html('wait...');
+                }
+            });
+        });
     </script>
-    </body>
+
+
+</body>
 
 </html>
