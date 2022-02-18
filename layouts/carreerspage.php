@@ -163,9 +163,9 @@ $result = $conn->query("SELECT * from careers");
                                             <a href="carreerspage.php">
                                                 <span class="pcoded-mtext">Careers</span>
                                             </a>
-                                            <a href="Views/ViewPage.php">
+                                            <!-- <a href="Views/ViewPage.php">
                                                 <span class="pcoded-mtext">Views</span>
-                                            </a>
+                                            </a> -->
                                         </li>
                                         <!-- <li class="">
                                             <a href="/borisveins/direct-resume">
@@ -241,6 +241,48 @@ $result = $conn->query("SELECT * from careers");
                                                                     <textarea name="description" id="description" class="form-control summernote" rows="5" placeholder="Write Something here..." required></textarea>
                                                                 </div>
                                                             </div>
+
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label for="title">Job Description</label>
+                                                                    <input type="text" name="Job_Desc_title" id="title" class="form-control" value="" placeholder="Enter Title" required>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label for="description">Job Description</label>
+                                                                    <textarea name="Job_Desc" id="description" class="form-control summernote" rows="5" placeholder="Write Something here..." required></textarea>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label for="posting">Benefits</label>
+                                                                    <input type="text" name="Bene_title" id="posting" class="form-control" value="" placeholder="Enter Post" required>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label for="description">Benefits Description</label>
+                                                                    <textarea name="Bene_Desc" id="description" class="form-control summernote" rows="5" placeholder="Write Something here..." required></textarea>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label for="no_of_vacancy">Job Requiremnts</label>
+                                                                    <input type="text" name="Job_Req_title" id="no_of_vacancy" class="form-control" value="" placeholder="Enter No of Vacancy" min="0" max="100" maxlength="100" required>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label for="description">Job Requiremnts Description</label>
+                                                                    <textarea name="Job_Req_Desc" id="description" class="form-control summernote" rows="5" placeholder="Write Something here..." required></textarea>
+                                                                </div>
+                                                            </div>
+
+
                                                         </div>
                                                     </div>
                                                     <div class="modal-footer">

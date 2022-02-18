@@ -155,9 +155,9 @@
                                             <a href="carreerspage.php">
                                                 <span class="pcoded-mtext">Careers</span>
                                             </a>
-                                            <a href="Views/ViewPage.php">
+                                            <!-- <a href="Views/ViewPage.php">
                                                 <span class="pcoded-mtext">Views</span>
-                                            </a>
+                                            </a> -->
                                         </li>
                                         <!-- <li class="">
                                             <a href="/borisveins/direct-resume">
