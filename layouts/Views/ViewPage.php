@@ -287,21 +287,21 @@ $result = $conn->query("SELECT * from views");
 
                                     <div class="card">
                                         <div class="card-block">
-                                            <div class="table-responsive dt-responsive">
+                                            <div class="table-responsive dt-responsive" id="doublescroll">
                                                 <table id="dom-jqry" class="table table-striped table-bordered nowrap">
                                                     <thead>
                                                         <tr>
-                                                            <th>#</th>
-                                                            <th>Job Description Title</th>
-                                                            <th>Job Description</th>
-                                                            <th>Benefits Title</th>
-                                                            <th>Benefits Description</th>
-                                                            <th>Job Requirements title </th>
-                                                            <th>Job Requirements Description</th>
+                                                            <th style="text-align: center;">#</th>
+                                                            <th style="text-align: center;">Job Description Title</th>
+                                                            <th style="text-align: center;">Job Description</th>
+                                                            <th style="text-align: center;">Benefits Title</th>
+                                                            <th style="text-align: center;">Benefits Description</th>
+                                                            <th style="text-align: center;">Job Requirements title </th>
+                                                            <th style="text-align: center;">Job Requirements Description</th>
 
-                                                            <th>Status</th>
-                                                            <th>Added On</th>
-                                                            <th>Action</th>
+                                                            <th style="text-align: center;">Status</th>
+                                                            <th style="text-align: center;">Added On</th>
+                                                            <th style="text-align: center;">Action</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -321,7 +321,7 @@ $result = $conn->query("SELECT * from views");
                                                                       
                                                                 <td><?php echo $row['Created_at']; ?></td> 
                                                                 <td>
-                                                                    <div class="btn-group">
+                                                                    <div class="btn-group" style="display: flex;">
 
                                                                         <a href="editViewPage.php?id=<?php echo $row['id']; ?>" class="btn btn-outline-primary" title="Edit Career">
                                                                             <i class="fa fa-edit"></i>
@@ -339,18 +339,15 @@ $result = $conn->query("SELECT * from views");
 
 
                                                         <?php if ($result->num_rows == 0) {  ?>
-                                                            <tr class="text-center">
-                                                                <td class="text-danger" colspan="8">
+                                                            <tr class="text-center" >
+                                                                <td class="text-danger" colspan="12"  >
                                                                     <h4>No Record Found..</h4>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="text-center">
-                                                                <td colspan="7">
-                                                                </td>
-                                                            </tr>
+                                                            
                                                         <?php } ?>
                                                     </tbody>
-                                                    <tfoot>
+                                                    <tfoot style="text-align: center;">
                                                         <tr>
                                                         <th>#</th>
                                                             <th>Job Description Title</th>
@@ -494,6 +491,25 @@ $result = $conn->query("SELECT * from views");
                 }
             });
         });
+
+        function DoubleScroll(element) {
+    var scrollbar = document.createElement('div');
+    scrollbar.appendChild(document.createElement('div'));
+    scrollbar.style.overflow = 'auto';
+    scrollbar.style.overflowY = 'hidden';
+    scrollbar.firstChild.style.width = element.scrollWidth+'px';
+    scrollbar.firstChild.style.paddingTop = '1px';
+    scrollbar.firstChild.appendChild(document.createTextNode('\xA0'));
+    scrollbar.onscroll = function() {
+        element.scrollLeft = scrollbar.scrollLeft;
+    };
+    element.onscroll = function() {
+        scrollbar.scrollLeft = element.scrollLeft;
+    };
+    element.parentNode.insertBefore(scrollbar, element);
+}
+
+DoubleScroll(document.getElementById('doublescroll'));
     </script>
 
 
