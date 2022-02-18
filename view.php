@@ -1,3 +1,26 @@
+<?php
+
+
+
+// $conn = mysqli_connect('localhost', 'sanjares_borisveins', 'OzW2MIEp8y?v', 'sanjares_borisveins');
+
+// $conn = mysqli_connect('localhost', 'root', '', 'borisveins');
+include 'layouts/localhostcon.php';
+
+
+// Die if connection was not successful
+if (!$conn) {
+  die("Sorry we failed to connect: " . mysqli_connect_error());
+} else {
+  // Submit these to a database
+  // Sql query to be executed 
+}
+$sql = "SELECT * FROM views WHERE status=1 ";
+$result = mysqli_query($conn, $sql) or die('query unsuccessfull');
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="zxx">
 <!-- Mirrored from flexcode.xyz/BorisVeins/about-us.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Jan 2022 08:56:10 GMT -->
@@ -88,18 +111,18 @@
                 <a class="menu-link " href="index.html">home </a>
               </li>
               <li class="menu-item has-sub-menu">
-                <a class="menu-link active" href="about-us.html">about us</a>
+                <a class="menu-link " href="about-us.html">about us</a>
               </li>
               <li class="menu-item has-sub-menu">
                 <a class="menu-link" href="services.html">services</a>
               </li>
 
               <li class="menu-item has-sub-menu">
-                <a class="menu-link" href="careers.php">careers</a>
+                <a class="menu-link active" href="careers.php">careers</a>
               </li>
 
               <li class="menu-item">
-                <a class="menu-link" href="contact-us.html">contact us </a>
+                <a class="menu-link " href="contact-us.html">contact us </a>
               </li>
             </ul>
           </div>
@@ -166,85 +189,53 @@
     <div class="overlay-bgabout parallax"></div>
 
     <div class="container applycontainer">
+    <?php
+      if (mysqli_num_rows($result) > 0) {
+        foreach ($result as $row) { ?>
       <div class="row">
         <div class="col-md-12">
           <div class="single-job-content">
             <div class="area-title text-center">
               <!-- <h2>You have almost finished</h2> -->
+     
               <div class="title uppercase pt-70 pb-26" style="text-align: left;">
-                <span>JOB DESCRIPTION</span>
+                <span><?php echo $row['Job_Desc_title'] ?></span>
               </div>
               <div class="single-job-form">
                 <p style="color: #fff;">
-                  There are many variations of passages of Lorem Ipsum available, but the my have suffered alteration in some form, by injected humour, or randomised words which don't loven slightly believable.available, but the majority have suffered alteration in some form,t the my have suffered alteration in some form, by injected humour, or randomised words or randomised words which don't loven slightly believable.available, but the majority have sufferederation in some
+                <?php echo $row['Job_Desc'] ?>
                 </p>
               </div>
 
               <div class="title uppercase pb-26" style="text-align: left; padding-top: 30px;">
-                <span>BENEFITS</span>
+                <span><?php echo $row['Bene_title'] ?></span>
               </div>
               <div class="single-job-form">
                 <p>
-                  <i class="fa fa-check check" aria-hidden="true"></i> <span class="check_pcolor"> Some form,t the my have suffered alteration in some form,andomised wo</span>
+                  <!-- <i class="fa fa-check check" aria-hidden="true"></i> -->
+                  <?php echo $row['Bene_Desc'] ?>
                 </p>
 
-                <p>
-                  <i class="fa fa-check check" aria-hidden="true"></i> <span class="check_pcolor"> believable.available, but the majority have sufferederation in some</span>
-                  </span>
-                </p>
-
-                <p></span>
-                  <i class="fa fa-check check" aria-hidden="true"></i> <span class="check_pcolor"> There are many variations of passages of Lorem Ipsum available, but</span>
-                  </span>
-                </p>
-
-                <p>
-                  <i class="fa fa-check check" aria-hidden="true"></i> <span class="check_pcolor"> Some form,t the my have suffered alteration in some form,andomised wo</span>
-                </p>
-
-                <p>
-                  <i class="fa fa-check check" aria-hidden="true"></i> <span class="check_pcolor"> believable.available, but the majority have sufferederation in some</span>
-                  </span>
-                </p>
-
-                <p>
-                  <i class="fa fa-check check" aria-hidden="true"></i> <span class="check_pcolor"> There are many variations of passages of Lorem Ipsum available, but</span>
-                  </span>
-                </p>
+         
               </div>
 
 
               <div class="title uppercase pb-26" style="text-align: left; padding-top: 30px;">
-                <span>JOB REQUIREMENTS
+                <span><?php echo $row['Job_Req_title'] ?>  </span>
 
-                </span>
+               
               </div>
               <div class="single-job-form">
                 <p>
-                  <i class="apply_check">1 .</i> <span class="apply_check_pcolor"> Some form,t the my have suffered alteration in some form,andomised </span>words
+                  <!-- <i class="apply_check">1 .</i> <span class="apply_check_pcolor"> -->
+                  <?php echo $row['Job_Req_Desc'] ?>
                 </p>
 
-                <p>
-                  <i class="apply_check">2 .</i> <span class="apply_check_pcolor"> believable.available, but the majority have sufferederation in some</span>
-                </p>
-
-                <p>
-                  <i class="apply_check">3 .</i> <span class="apply_check_pcolor"> There are many variations of passages of Lorem Ipsum available, but</span>
-                </p>
-
-                <p>
-                  <i class="apply_check">4 .</i> <span class="apply_check_pcolor"> Some form,t the my have suffered alteration in some form,andomised words </span>
-                </p>
-
-                <p>
-                  <i class="apply_check">5 .</i> <span class="apply_check_pcolor"> believable.available, but the majority have sufferederation in some</span>
-                </p>
-
-                <p>
-                  <i class="apply_check">6 .</i> <span class="apply_check_pcolor"> There are many variations of passages of Lorem Ipsum available, but</span>
-                </p>
+                
               </div>
-
+              <?php
+        }
+      } ?>
 
 
               <div class="title uppercase  pb-26" style="text-align: left; padding-top: 30px;">

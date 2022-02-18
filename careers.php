@@ -302,7 +302,7 @@ $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/oxpHWbNyE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <img src="assets/img/placements.png" alt="">
         </div>
         <div class="col-md-6">
           <div class="advertise-content pl-15">
@@ -311,11 +311,11 @@ $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
               <br>
               Companies That Rely on borisveins
             </h3>
-            <p class="pr-50">
+            <!-- <p class="pr-50">
               There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
               in some form, by injected humour, or randomised words which don't look even slightly believable. available,
               but the majority have suffered alteration in some form,
-            </p>
+            </p> -->
             <a href="#" class="button large-button mt-9">
               Get Started
             </a>

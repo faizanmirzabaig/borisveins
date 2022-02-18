@@ -243,7 +243,7 @@ $result = $conn->query("SELECT * from views");
                                                             <div class="col-md-12">
                                                                 <div class="form-group">
                                                                     <label for="no_of_vacancy">Job Requiremnts</label>
-                                                                    <input type="text" name="Job_Req_title" id="no_of_vacancy" class="form-control" value="" placeholder="Enter No of Vacancy" min="0" max="100" maxlength="3" required>
+                                                                    <input type="text" name="Job_Req_title" id="no_of_vacancy" class="form-control" value="" placeholder="Enter No of Vacancy" min="0" max="100" maxlength="100" required>
                                                                 </div>
                                                             </div>
 
@@ -405,6 +405,7 @@ $result = $conn->query("SELECT * from views");
             minHeight: null,
             maxHeight: null,
             focus: false,
+            inheritPlaceholder: true,
             toolbar: [
                 ['style', ['bold', 'italic', 'underline', 'clear']],
                 ['font', ['strikethrough', 'superscript', 'subscript']],
@@ -485,7 +486,7 @@ $result = $conn->query("SELECT * from views");
             $(".delete-object").click(function() {
                 if (window.confirm("Are you sure, You want to Delete ? ")) {
                     var careerId = $(this).attr("data-obj-id");
-                    window.location = `deletecarreerspage.php?id=${careerId}`;
+                    window.location = `deleteviewpage.php?id=${careerId}`;
                     // var action = $("#formDelete").attr("action") + $(this).attr("data-obj-id");
                     // $("#formDelete").attr("action", action);
                     // $("#formDelete").submit();

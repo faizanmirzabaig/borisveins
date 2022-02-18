@@ -22,7 +22,7 @@ include 'localhostcon.php';
     $sql="UPDATE careers SET title='{$etitle}',posting='{$epost}',no_of_vacancy='{$evac}',description='{$edesc}',status='{$estatus}' WHERE id={$id} ";
     $result=mysqli_query($conn,$sql) or die ('unsucessfull query');
 
-    header('Location:$base_url/layouts/carreerspage.php');
+    header("Location:$base_url/layouts/carreerspage.php");
     mysqli_close($conn);    
 
 
