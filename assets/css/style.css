@@ -595,11 +595,29 @@ a.button:after {
     padding-left: 43px !important;
     padding-right: 43px !important;
 }
-.dynamicheight{
-    min-height: 123px;
-    max-height: 250px;
-}
 
+.dynamicheight1{
+    height: 160px;
+    overflow-y: auto; /* new stuff */
+ 
+}
+.dynamicheight2{
+
+    height: 160px;
+    overflow-y: auto; /* new stuff */
+ 
+}
+.dynamicheight3{
+    height: 160px;
+    overflow-y: auto; /* new stuff */
+ 
+ 
+}
+.dynamicheight4{
+    height: 160px;
+    overflow-y: auto; /* new stuff */
+ 
+}
 /* job details end here */
 /* 
 
