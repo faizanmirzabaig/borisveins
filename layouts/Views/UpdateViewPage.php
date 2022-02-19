@@ -24,10 +24,12 @@ $base_url = BASE_URL;
     // $conn = mysqli_connect('localhost','root', '', 'borisveins');
     // $conn = mysqli_connect('localhost', 'sanjares_borisveins', 'OzW2MIEp8y?v', 'sanjares_borisveins');
 include '../localhostcon.php';
+
    
     $sql="UPDATE views SET Job_Desc_title='{$Job_Desc_title}',Job_Desc='{$etitle}',Bene_title='{$Bene_title}',Bene_Desc='{$epost}',Job_Req_title='{$Job_Req_title}',Job_Req_Desc='{$evac}',status='{$estatus}' WHERE id={$id} ";
+ 
+    
     $result=mysqli_query($conn,$sql) or die ('unsucessfull query');
-
     header("Location:$base_url/layouts/Views/ViewPage.php");
     mysqli_close($conn);    
 

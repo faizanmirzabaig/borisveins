@@ -1,12 +1,17 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 // $conn = mysqli_connect('localhost','root', '', 'borisveins');
 // $conn = mysqli_connect('localhost', 'sanjares_borisveins', 'OzW2MIEp8y?v', 'sanjares_borisveins');
 //  include 'localhostcon.php';
 include 'localhostcon.php';
 include_once 'const.php';
 
+
 $base_url = BASE_URL;
 // die($base_url);
+
 
 
 $result = $conn->query("SELECT * from careerss");
@@ -42,9 +47,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Submit these to a database
         // Sql query to be executed 
         $sql = "INSERT INTO `careerss` (`title`,`posting`,`job_pos`,`no_of_exp`,`no_of_vacancy`,`description`,`Job_Desc_title`,`Job_Desc`,`Bene_title`,`Bene_Desc`,`Job_Req_title`,`Job_Req_Desc`) VALUES('$title','$posting', '$Job_Location','$Experience_Req','$no_of_vacancy','$description','$Job_Desc_title','$Job_Desc','$Bene_title','$Bene_Desc','$Job_Req_title','$Job_Req_Desc');";
-      var_dump($sql);
       $result = mysqli_query($conn, $sql);
-        header("Location:$base_url/layouts/carreerspage.php");  
+        // header("Location:$base_url/layouts/carreerspage.php");  
   
     }
 }

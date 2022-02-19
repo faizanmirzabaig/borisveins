@@ -378,10 +378,10 @@ $result = $conn->query("SELECT * from careerss");
                                                                 <td>
                                                                     <div class="btn-group" style="display: flex;">
 
-                                                                        <a href="carreerseditpage.php?id=<?php echo $row['id']; ?>" class="btn btn-outline-primary" title="Edit Career">
+                                                                        <a href="carreerseditpage.php?id=<?php echo $row['Id']; ?>" class="btn btn-outline-primary" title="Edit Career">
                                                                             <i class="fa fa-edit"></i>
                                                                         </a>
-                                                                        <a href="deletecarreerspage.php?id=<?php echo $row['id']; ?>" class="btn btn-outline-danger delete-object">
+                                                                        <a href="deletecarreerspage.php?id=<?php echo $row['Id']; ?>" class="btn btn-outline-danger delete-object">
                                                                         <i class="fa fa-trash"></i>
                                                                         </a>
                                                                         <!-- <button type="button" class="btn btn-outline-danger delete-object" title="Delete Career" data-obj-id=<?php echo $row['id']; ?>>
@@ -395,14 +395,14 @@ $result = $conn->query("SELECT * from careerss");
 
                                                         <?php if ($result->num_rows == 0) {  ?>
                                                             <tr class="text-center">
-                                                                <td class="text-danger" colspan="8">
+                                                                <td class="text-danger" colspan="16">
                                                                     <h4>No Record Found..</h4>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="text-center">
+                                                            <!-- <tr class="text-center">
                                                                 <td colspan="7">
                                                                 </td>
-                                                            </tr>
+                                                            </tr> -->
                                                         <?php } ?>
                                                     </tbody>
                                                     <tfoot>

@@ -182,19 +182,22 @@ $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
       <div class="line line-on-center wow fadeIn" data-wow-delay=".7s"></div>
     </div>
 
-    <div class="container careers_extra_padding">
+    <div class="container-fluid careers_extra_padding">
 
       <?php
       if (mysqli_num_rows($result) > 0) {
         foreach ($result as $row) { ?>
-          <div class="row dyanmic_assets">
+          <div class="row dyanmic_assets dynamicheightrow">
        
-          <div class="col-md-3">
+          <div class="col-md-3 dynamicheight" >
               <div style="display: flex; align-items: center">
                 <div>
                   <img style="width: 72px; height: 72px" src="layouts/image/careers main backend/graphic.png" alt="" />
                 </div>
                 <div class="dynamicdiv" style="margin-left: 20px;">
+                <div class="title uppercase " style="text-align: left; padding-bottom: 17px;">
+                <span>Job Postion </span>
+                </div>
                   <h4 style="font-size: 22px; color: #000">
                     <?php echo $row['title'] ?>
 
@@ -207,30 +210,46 @@ $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
 
            
 
-            <div class="col-md-3">
+            <div class="col-md-3 dynamicheight">
+            <div class="title uppercase " style="text-align: left; padding-bottom: 17px;">
+                <span>Job Postion </span>
+                </div>
               <span class="mtb-30 block arrangement_desc" style="    color: #000;
             ">
                 <?php echo $row['description'] ?>
               </span>
             </div>
 
-            <div class="col-md-3">
-              <div style="display: flex; align-items: center;flex-direction: column;">
-               <div>
-                 <h5 style="font-size: 22px;
-    color: #000;">Job Location</h5>
+            <div class="col-md-3 dynamicheight">
+              
+              <div style="display: flex; align-items: center;flex-direction: row; justify-content: space-between; text-align: center;">
+            
+              <div>
+              <div class="title uppercase " style="text-align: center; padding-bottom: 17px;">
+                <span>Experience</span>
+                </div>
+                 <h5 style="color: #000;
+    font-size: 18px;
+    line-height: 24px;"><?php echo $row['no_of_exp'] ?></h5>
                </div>
                <div>
-                 <h5 style="font-size: 22px;
-    color: #000;">Job Location</h5>
+               <div class="title uppercase " style="text-align: left; padding-bottom: 17px;">
+                <span>Job Location </span>
+                </div>
+                 <h5 style="color: #000;
+    font-size: 18px;
+    line-height: 24px;"><?php echo $row['job_pos'] ?></h5>
                </div>
               </div>
             </div>
 
-            <div class="col-md-3 admincol">
+            <div class="col-md-3 admincol dynamicheight">
               <div class="hiddendiv">
                 <div style="    margin-bottom: 6px;
               ">
+                 <div class="title uppercase " style="text-align: center; padding-bottom: 17px;">
+                <span>no of vacancy</span>
+                </div>  
                   <span class="block " style="color: #000;
     font-size: 18px;
     line-height: 24px;"><?php echo $row['no_of_vacancy'] ?></span>

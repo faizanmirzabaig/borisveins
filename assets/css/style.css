@@ -592,7 +592,12 @@ a.button:after {
     margin-top: 19px;
 }
 .careers_extra_padding{
-    padding-left: ;
+    padding-left: 43px !important;
+    padding-right: 43px !important;
+}
+.dynamicheight{
+    min-height: 123px;
+    max-height: 250px;
 }
 
 /* job details end here */
@@ -731,6 +736,10 @@ Media Query Start Herer
         padding: 19px 0px 4px 0px;
 
 
+    }
+    .careers_extra_padding{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
     }
   
 
