@@ -19,7 +19,7 @@ $base_url = BASE_URL;
     // $conn = mysqli_connect('localhost', 'sanjares_borisveins', 'OzW2MIEp8y?v', 'sanjares_borisveins');
 include 'localhostcon.php';
    
-    $sql="UPDATE careers SET title='{$etitle}',posting='{$epost}',no_of_vacancy='{$evac}',description='{$edesc}',status='{$estatus}' WHERE id={$id} ";
+    $sql="UPDATE careerss SET title='{$etitle}',posting='{$epost}',no_of_vacancy='{$evac}',description='{$edesc}',status='{$estatus}' WHERE id={$id} ";
     $result=mysqli_query($conn,$sql) or die ('unsucessfull query');
 
     header("Location:$base_url/layouts/carreerspage.php");

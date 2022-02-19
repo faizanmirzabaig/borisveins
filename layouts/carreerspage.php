@@ -11,7 +11,7 @@
 // $conn = mysqli_connect('localhost', 'sanjares_borisveins', 'OzW2MIEp8y?v', 'sanjares_borisveins');
 include 'localhostcon.php';
 
-$result = $conn->query("SELECT * from careers");
+$result = $conn->query("SELECT * from careerss");
 
 
 
@@ -223,7 +223,7 @@ $result = $conn->query("SELECT * from careers");
 
                                                             <div class="col-md-4">
                                                                 <div class="form-group">
-                                                                    <label for="posting">Post</label>
+                                                                    <label for="posting">Job Short Details</label>
                                                                     <input type="text" name="posting" id="posting" class="form-control" value="" placeholder="Enter Post" required>
                                                                 </div>
                                                             </div>
@@ -337,39 +337,56 @@ $result = $conn->query("SELECT * from careers");
                                                     <thead>
                                                         <tr>
                                                             <th>#</th>
-                                                            <th>Title</th>
-                                                            <th>Post</th>
-                                                            <th>No of Vacancy</th>
-                                                            <!-- <th>No of Applied</th> -->
+                                                            <th>Job Postion</th>
+                                                            <th>Job Short Details</th>
+                                                            <th>Job Location</th>
+                                                            <th>Years of Experience</th>
+                                                            <th>No of Opening</th>
+                                                            <th>Description</th>
+                                                            <th>Job Description Title</th>
+                                                            <th>Job Description </th>
+                                                            <th>Benefits Title </th>
+                                                            <th>Benefits Description </th>
+                                                            <th>Job Requirements </th>
+                                                            <th>Job Requirements Description </th>
                                                             <th>Status</th>
                                                             <th>Added On</th>
                                                             <th>Action</th>
+                                                           
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <?php foreach ($result as $row) { ?>
                                                             <tr>
-                                                                <td><?php echo $row['id']; ?></td>
+                                                                <td><?php echo $row['Id']; ?></td>
                                                                 <td> <?php echo $row['title']; ?></td>
                                                                 <td> <?php echo $row['posting']; ?> </td>
+                                                                <td><?php echo $row['job_pos']; ?></td>
+                                                                <td><?php echo $row['no_of_exp']; ?></td>
                                                                 <td><?php echo $row['no_of_vacancy']; ?></td>
-
+                                                                <td><?php echo $row['description']; ?></td>
+                                                                <td><?php echo $row['Job_Desc_title']; ?></td>
+                                                                <td><?php echo $row['Job_Desc']; ?></td>
+                                                                <td><?php echo $row['Bene_title']; ?></td>
+                                                                <td><?php echo $row['Bene_Desc']; ?></td>
+                                                                <td><?php echo $row['Job_Req_title']; ?></td>
+                                                                <td><?php echo $row['Job_Req_Desc']; ?></td>
                                                                 <td><?php echo $row['status']==0 ? 'Deactivated':'Activated'?></td>
+                                                                <td><?php echo $row['created_at']; ?></td>
                                                                                               
 
-                                                                <td><?php echo $row['updated_at']; ?></td>
                                                                 <td>
-                                                                    <div class="btn-group">
+                                                                    <div class="btn-group" style="display: flex;">
 
                                                                         <a href="carreerseditpage.php?id=<?php echo $row['id']; ?>" class="btn btn-outline-primary" title="Edit Career">
                                                                             <i class="fa fa-edit"></i>
                                                                         </a>
-                                                                        <!-- <a href="deletecarreerspage.php?id=<?php echo $row['id']; ?>" class="btn btn-outline-danger delete-object">
+                                                                        <a href="deletecarreerspage.php?id=<?php echo $row['id']; ?>" class="btn btn-outline-danger delete-object">
                                                                         <i class="fa fa-trash"></i>
-                                                                        </a> -->
-                                                                        <button type="button" class="btn btn-outline-danger delete-object" title="Delete Career" data-obj-id=<?php echo $row['id']; ?>>
+                                                                        </a>
+                                                                        <!-- <button type="button" class="btn btn-outline-danger delete-object" title="Delete Career" data-obj-id=<?php echo $row['id']; ?>>
                                                                             <i class="fa fa-trash"></i>
-                                                                        </button>
+                                                                        </button> -->
                                                                     </div>
                                                                 </td>
                                                             </tr>
@@ -390,11 +407,19 @@ $result = $conn->query("SELECT * from careers");
                                                     </tbody>
                                                     <tfoot>
                                                         <tr>
-                                                            <th>#</th>
-                                                            <th>Title</th>
-                                                            <th>Post</th>
-                                                            <th>No of Vacancy</th>
-                                                            <!-- <th>No of Applied</th> -->
+                                                        <th>#</th>
+                                                            <th>Job Postion</th>
+                                                            <th>Job Short Details</th>
+                                                            <th>Job Location</th>
+                                                            <th>Years of Experience</th>
+                                                            <th>No of Opening</th>
+                                                            <th>Description</th>
+                                                            <th>Job Description Title</th>
+                                                            <th>Job Description </th>
+                                                            <th>Benefits Title </th>
+                                                            <th>Benefits Description </th>
+                                                            <th>Job Requirements </th>
+                                                            <th>Job Requirements Description </th>
                                                             <th>Status</th>
                                                             <th>Added On</th>
                                                             <th>Action</th>

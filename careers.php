@@ -15,7 +15,7 @@ if (!$conn) {
   // Submit these to a database
   // Sql query to be executed 
 }
-$sql = "SELECT * FROM careers WHERE status=1 ";
+$sql = "SELECT * FROM careerss WHERE status=1 ";
 $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
 
 

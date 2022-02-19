@@ -9,7 +9,7 @@ include_once 'const.php';
 $base_url = BASE_URL;
 
 
-$sql="DELETE FROM careers WHERE id={$id} ";
+$sql="DELETE FROM careerss WHERE id={$id} ";
 $result=mysqli_query($conn,$sql);
 
 header("Location:$base_url/layouts/carreerspage.php");

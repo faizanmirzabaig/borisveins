@@ -9,13 +9,30 @@ $base_url = BASE_URL;
 // die($base_url);
 
 
-$result = $conn->query("SELECT * from careers");
+$result = $conn->query("SELECT * from careerss");
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $name = $_POST['title'];
-    $email = $_POST['posting'];
-    $vac = $_POST['no_of_vacancy'];
-    $desc = $_POST['description'];
+    $title = $_POST['title'];
+    $posting = $_POST['posting'];
+    $Job_Location = $_POST['Job_Location'];
+
+    $Experience_Req = $_POST['Experience_Req'];
+    $no_of_vacancy = $_POST['no_of_vacancy'];
+
+    $description = $_POST['description'];
+
+    $Job_Desc_title = $_POST['Job_Desc_title'];
+
+    $Job_Desc = $_POST['Job_Desc'];
+
+    $Bene_title = $_POST['Bene_title'];
+
+    $Bene_Desc = $_POST['Bene_Desc'];
+
+    $Job_Req_title = $_POST['Job_Req_title'];
+
+    $Job_Req_Desc = $_POST['Job_Req_Desc'];
+
 
 
     // Die if connection was not successful
@@ -24,12 +41,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         // Submit these to a database
         // Sql query to be executed 
-        $sql = "INSERT INTO `careers` (`title`, `posting`, `no_of_vacancy`, `description`) VALUES ('$name', '$email', '$vac','$desc')";
-        $result = mysqli_query($conn, $sql);
+        $sql = "INSERT INTO `careerss` (`title`,`posting`,`job_pos`,`no_of_exp`,`no_of_vacancy`,`description`,`Job_Desc_title`,`Job_Desc`,`Bene_title`,`Bene_Desc`,`Job_Req_title`,`Job_Req_Desc`) VALUES('$title','$posting', '$Job_Location','$Experience_Req','$no_of_vacancy','$description','$Job_Desc_title','$Job_Desc','$Bene_title','$Bene_Desc','$Job_Req_title','$Job_Req_Desc');";
+      var_dump($sql);
+      $result = mysqli_query($conn, $sql);
         header("Location:$base_url/layouts/carreerspage.php");  
   
     }
 }
-
-
-?>

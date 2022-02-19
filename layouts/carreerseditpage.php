@@ -213,7 +213,7 @@ if ($conn->connect_error) {
 } 
 
 $cus_id=$_GET['id'];
-$sql="SELECT * FROM careers WHERE id={$cus_id} ";
+$sql="SELECT * FROM careerss WHERE id={$cus_id} ";
 $result=mysqli_query($conn,$sql) or die('query unsuccessfull');
 if (mysqli_num_rows($result)>0){
     foreach ($result as $row){
@@ -270,6 +270,8 @@ if (mysqli_num_rows($result)>0){
 </textarea>
                     </div>
                 </div>
+
+                
 
                 <div class="col-md-12 text-center">
                     <button type="submit" class="btn btn-primary update_button"> <i class="fa fa-send"></i>
