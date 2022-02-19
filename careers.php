@@ -182,13 +182,14 @@ $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
       <div class="line line-on-center wow fadeIn" data-wow-delay=".7s"></div>
     </div>
 
-    <div class="container">
+    <div class="container careers_extra_padding">
 
       <?php
       if (mysqli_num_rows($result) > 0) {
         foreach ($result as $row) { ?>
           <div class="row dyanmic_assets">
-            <div class="col-md-5">
+       
+          <div class="col-md-3">
               <div style="display: flex; align-items: center">
                 <div>
                   <img style="width: 72px; height: 72px" src="layouts/image/careers main backend/graphic.png" alt="" />
@@ -203,11 +204,27 @@ $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+
+           
+
+            <div class="col-md-3">
               <span class="mtb-30 block arrangement_desc" style="    color: #000;
             ">
                 <?php echo $row['description'] ?>
               </span>
+            </div>
+
+            <div class="col-md-3">
+              <div style="display: flex; align-items: center;flex-direction: column;">
+               <div>
+                 <h5 style="font-size: 22px;
+    color: #000;">Job Location</h5>
+               </div>
+               <div>
+                 <h5 style="font-size: 22px;
+    color: #000;">Job Location</h5>
+               </div>
+              </div>
             </div>
 
             <div class="col-md-3 admincol">
@@ -224,6 +241,7 @@ $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
               </div>
 
             </div>
+
           </div>
       <?php
         }

@@ -216,8 +216,8 @@ $result = $conn->query("SELECT * from careers");
 
                                                             <div class="col-md-4">
                                                                 <div class="form-group">
-                                                                    <label for="title">Title</label>
-                                                                    <input type="text" name="title" id="title" class="form-control" value="" placeholder="Enter Title" required>
+                                                                    <label for="title">Job Position</label>
+                                                                    <input type="text" name="title" id="title" class="form-control" value="" placeholder="Job Position" required>
                                                                 </div>
                                                             </div>
 
@@ -230,10 +230,25 @@ $result = $conn->query("SELECT * from careers");
 
                                                             <div class="col-md-4">
                                                                 <div class="form-group">
-                                                                    <label for="no_of_vacancy">No of Vacancy</label>
-                                                                    <input type="number" name="no_of_vacancy" id="no_of_vacancy" class="form-control" value="{{ old('no_of_vacancy') }}" placeholder="Enter No of Vacancy" min="0" max="100" maxlength="3" required>
+                                                                    <label for="no_of_vacancy">Job Location</label>
+                                                                    <input type="text" name="Job_Location" id="no_of_vacancy" class="form-control" placeholder="Job Location" required>
                                                                 </div>
                                                             </div>
+
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">
+                                                                    <label for="no_of_vacancy">Year of Experience Required</label>
+                                                                    <input type="text" name="Experience_Req" id="no_of_vacancy" class="form-control"  placeholder="Year of Experience Required" required>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">
+                                                                    <label for="no_of_vacancy">No of Opening</label>
+                                                                    <input type="text" name="no_of_vacancy" id="no_of_vacancy" class="form-control"  placeholder="Enter No of Opening"  required>
+                                                                </div>
+                                                            </div>
+                                                          
 
                                                             <div class="col-md-12">
                                                                 <div class="form-group">
