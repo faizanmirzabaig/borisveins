@@ -44,6 +44,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $contact=" $_POST[message]";
     $email="$_POST[subject] ";
     // $message="$_POST[message]";
+    var_dump($name);
+    var_dump($experience);
+    var_dump($contact);
+    var_dump($email);
+    // var_dump($name);
+
     $html = "  
     <table style='width: 100%;border: 2px solid black;border-collapse: collapse;'>
            <tr style='width: 100%;border: 2px solid black;'>
@@ -54,14 +60,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         </tr>
         <tr style='width: 100%;border: 2px solid black;'>
-            <th style='width: 20%;border: 2px solid black;'>$UserName</th>
-            <th style='width: 20%;border: 2px solid black;'>$UserEmail</th>
-            <th style='width: 20%;border: 2px solid black;'>$message</th>
-            <th style='width: 20%;border: 2px solid black;'>$subject</th>
+            <th style='width: 20%;border: 2px solid black;'>$name</th>
+            <th style='width: 20%;border: 2px solid black;'>$experience</th>
+            <th style='width: 20%;border: 2px solid black;'>$contact</th>
+            <th style='width: 20%;border: 2px solid black;'>$email</th>
    
         </tr>
        </table>";
-    $msgHtml = "$name $experience $contact $email $message";
+    // $msgHtml = "$name $experience $contact $email $message";
+    
 $mail->msgHTML($html);
 
 }

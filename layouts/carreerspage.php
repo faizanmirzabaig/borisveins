@@ -214,6 +214,10 @@ $result = $conn->query("SELECT * from careerss");
                                                     <div class="modal-body">
                                                         <div class="row">
 
+                                                        <div class="col-md-12">
+                                                        <h1 class="careers_details_fi">Careers Details</h1>
+                                                            </div>
+
                                                             <div class="col-md-4">
                                                                 <div class="form-group">
                                                                     <label for="title">Job Position</label>
@@ -258,8 +262,12 @@ $result = $conn->query("SELECT * from careerss");
                                                             </div>
 
                                                             <div class="col-md-12">
+                                                        <h1 class="careers_details_si">Views Details</h1>
+                                                            </div>
+
+                                                            <div class="col-md-12">
                                                                 <div class="form-group">
-                                                                    <label for="title">Job Description</label>
+                                                                    <label for="title">Job Description Title</label>
                                                                     <input type="text" name="Job_Desc_title" id="title" class="form-control" value="" placeholder="Enter Title" required>
                                                                 </div>
                                                             </div>
@@ -272,7 +280,7 @@ $result = $conn->query("SELECT * from careerss");
 
                                                             <div class="col-md-12">
                                                                 <div class="form-group">
-                                                                    <label for="posting">Benefits</label>
+                                                                    <label for="posting">Benefits Description <Title></Title></label>
                                                                     <input type="text" name="Bene_title" id="posting" class="form-control" value="" placeholder="Enter Post" required>
                                                                 </div>
                                                             </div>
@@ -285,7 +293,7 @@ $result = $conn->query("SELECT * from careerss");
 
                                                             <div class="col-md-12">
                                                                 <div class="form-group">
-                                                                    <label for="no_of_vacancy">Job Requiremnts</label>
+                                                                    <label for="no_of_vacancy">Job Requiremnts Description Title</label>
                                                                     <input type="text" name="Job_Req_title" id="no_of_vacancy" class="form-control" value="" placeholder="Enter No of Vacancy" min="0" max="100" maxlength="100" required>
                                                                 </div>
                                                             </div>

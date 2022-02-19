@@ -61,3 +61,69 @@
 }
 
 
+.careers_details_fi{
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 34px;
+
+}
+.careers_details_fi::before{
+    content: '';
+ position: absolute;
+ top: -15px;
+ border-top: 1px solid rgba(0, 0, 0, 0.2);
+ width: 100%;
+ left: 0;
+}
+
+.careers_details_fi{
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 38px;
+    font-size: 25px;
+
+
+}
+.careers_details_fi::before{
+    content: '';
+ position: absolute;
+ top: -12px;
+ border-top: 1px solid rgba(0, 0, 0, 0.2);
+ width: 100%;
+ left: 0;
+}
+.careers_details_fi::after{
+    content: '';
+ position: absolute;
+ bottom: -13px;
+ border-top: 1px solid rgba(0, 0, 0, 0.2);
+ width: 100%;
+ left: 0;
+}
+
+.careers_details_si{
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 38px;
+    font-size: 25px;
+
+}
+.careers_details_si::before{
+    content: '';
+ position: absolute;
+ top: -12px;
+ border-top: 1px solid rgba(0, 0, 0, 0.2);
+ width: 100%;
+ left: 0;
+}
+.careers_details_si::after{
+    content: '';
+ position: absolute;
+ bottom: -13px;
+ border-top: 1px solid rgba(0, 0, 0, 0.2);
+ width: 100%;
+ left: 0;
+}
