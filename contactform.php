@@ -24,17 +24,18 @@ $mail->Port = 587;
 $mail->IsHTML(true);
 
 //Set who the message is to be sent from
-$mail->setFrom('mirzaasdasd@gmail.com', 'Faizan');
+$mail->setFrom('rabya@borisveins.com', 'borisveins');
 
 //Set an alternative reply-to address
 // $mail->addReplyTo('replyto@gmail.com', 'Secure Developer');
 
 //Set who the message is to be sent to
+$mail->addAddress('rabya@borisveins.com', 'borisveins');
 $mail->addAddress('mirzafaizan1931@gmail.com', 'faizan');
 $mail->addAddress('Sanjaresolutions@gmail.com', 'farzana mam');
 
 //Set the subject line
-$mail->Subject = 'PHPMailer SMTP test';
+$mail->Subject = 'Contact form submitted data.';
 //Read an HTML message body from an external file, convert referenced images to embedded,
 
 //convert HTML into a basic plain-text alternative body

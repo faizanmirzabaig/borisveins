@@ -58,6 +58,7 @@
 
     <!-- main-LTR -->
     <link rel="stylesheet" href="assets/css/main-LTR.css" />
+
   </head>
 
   <body class="dark-theme rounded-btns" style="background-color: #121212">
@@ -190,20 +191,20 @@
             <div class="row dyanmic_assets dynamicheightrow">
         
             <div class="col-md-3 dynamicheight1" >
-                <div style="display: flex; align-items: center">
+                <div class="dynamic_first" >
                   <div>
-                    <img style="width: 72px; height: 72px" src="layouts/image/careers main backend/graphic.png" alt="" />
+                    <img class="dynamic_first_img"  src="layouts/image/careers main backend/graphic.png" alt="" />
                   </div>
-                  <div class="dynamicdiv" style="margin-left: 20px;">
-                  <div class="title uppercase " style="text-align: left; padding-bottom: 17px;">
+                  <div class="dynamicdiv" >
+                  <div class="title uppercase " >
                   <span>Job Postion </span>
                   </div>
-                    <h4 style="font-size: 22px; color: #000">
+                    <h4 class="dynamic_H4" >
                       <?php echo $row['title'] ?>
 
 
                     </h4>
-                    <h5 style="color: #000; color: 18px"> <?php echo $row['posting'] ?></h5>
+                    <h5 class="dynamic_H5"> <?php echo $row['posting'] ?></h5>
                   </div>
                 </div>
               </div>
@@ -211,7 +212,7 @@
             
              
               <div class="col-md-3 dynamicheight2">
-              <span class="title uppercase " style="text-align: left; padding-bottom: 17px;">
+              <span class="title uppercase dynamicheight2_span " >
                   <span>Job Description </span>
               </span>
                 <span class="mtb-30 block arrangement_desc" style="    color: #000; 
@@ -221,41 +222,35 @@
                 </span>
               </div>
 
-              <div class="col-md-3 dynamicheight3">
+              <div class="col-md-4 dynamicheight3">
                 
                 
-                <div style="display: flex; align-items: center;flex-direction: row; justify-content: space-between; text-align: center;">
+                <div>
               
                 <div>
-                <div class="title uppercase " style="text-align: center; padding-bottom: 17px;">
+                <div class="title uppercase dynamicheight3_div " >
                   <span>Experience</span>
                   </div>
-                  <h5 style="color: #000;
-      font-size: 18px;
-      line-height: 24px;"><?php echo $row['no_of_exp'] ?></h5>
+                  <h5 class="dyanamicheight3_h5" ><?php echo $row['no_of_exp'] ?></h5>
                 </div>
                 <div>
-                <div class="title uppercase " style="text-align: left; padding-bottom: 17px;">
+                <div class="title uppercase dynamicheight3_sdiv " >
                   <span>Job Location </span>
                   </div>
-                  <h5 style="color: #000;
-      font-size: 18px;
-      line-height: 24px;"><?php echo $row['job_pos'] ?></h5>
+                  <h5 class="dynamicheight3_h5"
+      ><?php echo $row['job_pos'] ?></h5>
                 </div>
                 </div>
               </div>
 
-              <div class="col-md-3 admincol dynamicheight4" id="dynamicheight">
-              <div class="title uppercase " style="text-align: center; padding-bottom: 17px;">
+              <div class="col-md-2 admincol dynamicheight4" id="dynamicheight">
+              <div class="title uppercase dynamicheight4_div " >
                   <span>no of vacancy</span>
                   </div> 
                 <div class="hiddendiv">
-                  <div style="    margin-bottom: 6px;
-                ">
+                  <div>
                    
-                    <span class="block " style="color: #000;
-      font-size: 18px;
-      line-height: 24px;"><?php echo $row['no_of_vacancy'] ?></span>
+                    <span class="block dynamicheight4_span " ><?php echo $row['no_of_vacancy'] ?></span>
                   </div>
                   <div>
                     <a href="view.php" class="button button-red"> View </a>
