@@ -222,9 +222,9 @@ if (mysqli_num_rows($result)>0){
             <input type="hidden" name="_token" value="ac1efXHi3RdqdT9iZcYHltRCTkp9dmoZn4eyHk9E">            <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="title">Postion Name</label>
+                        <label for="title">Position Name</label>
                         <input type="text" name="title"  id="title" class="form-control" value="<?php echo $row['title']?>"
-                            placeholder="Enter Job Position" required>
+                            placeholder="Enter Position Name" required>
                             <input type="hidden" name="Id" value="<?php echo $row['Id']?>">
                     </div>
                 </div>
@@ -239,9 +239,9 @@ if (mysqli_num_rows($result)>0){
 
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="Job_Jocation">Enter Job Location</label>
+                        <label for="Job_Jocation">Job Location</label>
                         <input type="text"  name="Job_Location" id="Job_Jocation" class="form-control"
-                            value="<?php echo $row['job_pos']?>" placeholder="Enter Job Location" required>
+                            value="<?php echo $row['job_pos']?>" placeholder="Job Location" required>
                     </div>
                 </div>
 
@@ -255,9 +255,9 @@ if (mysqli_num_rows($result)>0){
 
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="no_of_vacancy">No of Vacancy</label>
+                        <label for="no_of_vacancy">No of Position</label>
                         <input type="text"  name="no_of_vacancy" id="no_of_vacancy" class="form-control"
-                            value="<?php echo $row['no_of_vacancy']?>" placeholder="Enter No of Vacancy"  required>
+                            value="<?php echo $row['no_of_vacancy']?>" placeholder="Enter No of Position"  required>
                     </div>
                 </div>
 

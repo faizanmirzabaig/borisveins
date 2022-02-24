@@ -196,7 +196,7 @@ $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
                 </div>
                 <div class="dynamicdiv" style="margin-left: 20px;">
                   <div class="title uppercase " style="text-align: left; padding-bottom: 17px;">
-                    <span>Postion Name </span>
+                    <span>Position Name </span>
                   </div>
                   <h4 style="font-size: 16px; color: #000;text-align: center  ;" >
                     <?php echo $row['title'] ?>
@@ -226,6 +226,14 @@ $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
 
 
               <div style="display: flex; align-items: center;flex-direction: row; justify-content: space-evenly; text-align: center;">
+              <div>
+                  <div class="title uppercase " style="text-align: left; padding-bottom: 17px;">
+                    <span>Job Location </span>
+                  </div>
+                  <h5 style="color: #000;
+    font-size: 16px;
+    line-height: 24px;"><?php echo $row['job_pos'] ?></h5>
+                </div>
 
                 <div>
                   <div class="title uppercase " style="text-align: center; padding-bottom: 17px;">
@@ -235,14 +243,7 @@ $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
     font-size: 16px;
     line-height: 24px;"><?php echo $row['no_of_exp'] ?></h5>
                 </div>
-                <div>
-                  <div class="title uppercase " style="text-align: left; padding-bottom: 17px;">
-                    <span>Job Location </span>
-                  </div>
-                  <h5 style="color: #000;
-    font-size: 16px;
-    line-height: 24px;"><?php echo $row['job_pos'] ?></h5>
-                </div>
+                
               </div>
             </div>
 
@@ -271,7 +272,7 @@ $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
                 <a href="view.php?careerId=<?php echo $row['Id'] ?>" class="button button-red" style="    padding: 6px 23px;     font-size: 17px;     letter-spacing: 3px;
 
 
-"> View </a>
+"> Description </a>
               </div>
 
             </div>

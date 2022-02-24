@@ -13,17 +13,17 @@ $no_of_vacancy = $_POST['no_of_vacancy'];
 
 $description = $_POST['description'];
 
-$Job_Desc_title = $_POST['Job_Desc_title'];
+// $Job_Desc_title = $_POST['Job_Desc_title'];
 
-$Job_Desc = $_POST['Job_Desc'];
+// $Job_Desc = $_POST['Job_Desc'];
 
-$Bene_title = $_POST['Bene_title'];
+// $Bene_title = $_POST['Bene_title'];
 
-$Bene_Desc = $_POST['Bene_Desc'];
+// $Bene_Desc = $_POST['Bene_Desc'];
 
-$Job_Req_title = $_POST['Job_Req_title'];
+// $Job_Req_title = $_POST['Job_Req_title'];
 
-$Job_Req_Desc = $_POST['Job_Req_Desc'];
+// $Job_Req_Desc = $_POST['Job_Req_Desc'];
 $estatus=$_POST['status'];
 
 $id=$_POST['Id'];

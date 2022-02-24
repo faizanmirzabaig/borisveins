@@ -203,29 +203,16 @@ $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
                     <p style="text-align: left; color: #fff;
     font-size: 18px;
     line-height: 1.75;
-    font-weight: 400;">Postion Name :- <?php echo $row['title'] ?></p>
+    font-weight: 400;">Position Name :- <?php echo $row['title'] ?></p>
 
                     <p style="text-align: left; color: #fff;
     font-size: 18px;
     line-height: 1.75;
-    font-weight: 400;">Job Short Details :- <?php echo $row['posting'] ?>
+    font-weight: 400;">Job Location :- <?php echo $row['job_pos'] ?>
                     </p>
                   </div>
 
 
-                  <div class="single-job-form">
-                    <p style="text-align: left; color: #fff;
-    font-size: 18px;
-    line-height: 1.75;
-    font-weight: 400;">Year of Experience Required :- <?php echo $row['no_of_exp'] ?>
-                    </p>
-
-                    <!-- <p style="text-align: left; color: #fff;
-    font-size: 18px;
-    line-height: 1.75;
-    font-weight: 400;">No of Opening :- <?php echo $row['no_of_exp'] ?>
-                    </p> -->
-                  </div>
 
 
                   <div class="single-job-form">
@@ -238,7 +225,7 @@ $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
                     <p style="text-align: left; color: #fff;
     font-size: 18px;
     line-height: 1.75;
-    font-weight: 400;">No of Opening :- <?php echo $row['no_of_exp'] ?>
+    font-weight: 400;">No of Opening :- <?php echo $row['no_of_vacancy'] ?>
                     </p>
                   </div>
 
