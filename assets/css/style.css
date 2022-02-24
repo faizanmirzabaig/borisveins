@@ -596,7 +596,7 @@ a.button:after {
   margin-left: 20px !important;
 }
 .uppercase {
-  text-align: center !important;
+  /* text-align: center !important; */
   padding-bottom: 17px !important;
 }
 .dynamic_H4 {

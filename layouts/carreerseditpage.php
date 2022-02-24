@@ -222,25 +222,25 @@ if (mysqli_num_rows($result)>0){
             <input type="hidden" name="_token" value="ac1efXHi3RdqdT9iZcYHltRCTkp9dmoZn4eyHk9E">            <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="title">Job Position</label>
-                        <input type="text" name="title" maxlength="101" id="title" class="form-control" value="<?php echo $row['title']?>"
+                        <label for="title">Postion Name</label>
+                        <input type="text" name="title"  id="title" class="form-control" value="<?php echo $row['title']?>"
                             placeholder="Enter Job Position" required>
                             <input type="hidden" name="Id" value="<?php echo $row['Id']?>">
                     </div>
                 </div>
 
-                <div class="col-md-6">
+                <!-- <div class="col-md-6">
                     <div class="form-group">
                         <label for="posting">Job Short Details</label>
-                        <input type="text" maxlength="101" name="posting" id="posting" class="form-control"
+                        <input type="text"  name="posting" id="posting" class="form-control"
                             value="<?php echo $row['posting']?>" placeholder="Enter Post" required>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="Job_Jocation">Enter Job Location</label>
-                        <input type="text" maxlength="101" name="Job_Location" id="Job_Jocation" class="form-control"
+                        <input type="text"  name="Job_Location" id="Job_Jocation" class="form-control"
                             value="<?php echo $row['job_pos']?>" placeholder="Enter Job Location" required>
                     </div>
                 </div>
@@ -248,7 +248,7 @@ if (mysqli_num_rows($result)>0){
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="no_of_exp">Year of Experience </label>
-                        <input type="text" maxlength="101" name="Experience_Req" id="no_of_exp" class="form-control"
+                        <input type="text"  name="Experience_Req" id="no_of_exp" class="form-control"
                             value="<?php echo $row['no_of_exp']?>" placeholder="Year of Experience "  required>
                     </div>
                 </div>
@@ -256,7 +256,7 @@ if (mysqli_num_rows($result)>0){
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="no_of_vacancy">No of Vacancy</label>
-                        <input type="text" maxlength="101" name="no_of_vacancy" id="no_of_vacancy" class="form-control"
+                        <input type="text"  name="no_of_vacancy" id="no_of_vacancy" class="form-control"
                             value="<?php echo $row['no_of_vacancy']?>" placeholder="Enter No of Vacancy"  required>
                     </div>
                 </div>
@@ -264,7 +264,7 @@ if (mysqli_num_rows($result)>0){
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="description">Description</label>
-                        <textarea maxlength="101" name="description" id="description" name="description" class="form-control summernote" rows="5"
+                        <textarea  name="description" id="description" name="description" class="form-control summernote" rows="5"
                             placeholder="Write Something here..." required>
                             <?php echo $row['description']?>
                              

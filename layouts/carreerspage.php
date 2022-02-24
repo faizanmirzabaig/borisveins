@@ -225,12 +225,12 @@ $result = $conn->query("SELECT * from careerss");
                                                                 </div>
                                                             </div>
 
-                                                            <div class="col-md-4">
+                                                            <!-- <div class="col-md-4">
                                                                 <div class="form-group">
                                                                     <label for="posting">Job Short Details</label>
                                                                     <input type="text" maxlength="101" name="posting" id="posting" class="form-control" value="" placeholder="Enter Post" required>
                                                                 </div>
-                                                            </div>
+                                                            </div> -->
 
                                                             <div class="col-md-4">
                                                                 <div class="form-group">

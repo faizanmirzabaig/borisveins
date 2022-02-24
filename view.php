@@ -15,7 +15,8 @@ if (!$conn) {
   // Submit these to a database
   // Sql query to be executed 
 }
-$sql = "SELECT * FROM careerss WHERE status=1 ";
+$careerId = $_GET['careerId'];
+$sql = "SELECT * FROM careerss WHERE status=1 and id = $careerId ";
 $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
 
 ?>
@@ -194,18 +195,18 @@ $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
         foreach ($result as $row) { ?>
           <div class="row">
             <div class="col-md-12">
-              <div class="single-job-content">
+              <div class="">
                 <div class="area-title text-center">
                   <!-- <h2>You have almost finished</h2> -->
 
                   <div class="single-job-form pt-70">
                     <p style="text-align: left; color: #fff;
-    font-size: 23px;
+    font-size: 18px;
     line-height: 1.75;
-    font-weight: 400;">Job Postion :- <?php echo $row['title'] ?></p>
+    font-weight: 400;">Postion Name :- <?php echo $row['title'] ?></p>
 
                     <p style="text-align: left; color: #fff;
-    font-size: 23px;
+    font-size: 18px;
     line-height: 1.75;
     font-weight: 400;">Job Short Details :- <?php echo $row['posting'] ?>
                     </p>
@@ -214,28 +215,28 @@ $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
 
                   <div class="single-job-form">
                     <p style="text-align: left; color: #fff;
-    font-size: 23px;
+    font-size: 18px;
     line-height: 1.75;
     font-weight: 400;">Year of Experience Required :- <?php echo $row['no_of_exp'] ?>
                     </p>
 
-                    <p style="text-align: left; color: #fff;
-    font-size: 23px;
+                    <!-- <p style="text-align: left; color: #fff;
+    font-size: 18px;
     line-height: 1.75;
     font-weight: 400;">No of Opening :- <?php echo $row['no_of_exp'] ?>
-                    </p>
+                    </p> -->
                   </div>
 
 
                   <div class="single-job-form">
                     <p style="text-align: left; color: #fff;
-    font-size: 23px;
+    font-size: 18px;
     line-height: 1.75;
     font-weight: 400;">Year of Experience Required :- <?php echo $row['no_of_exp'] ?>
                     </p>
 
                     <p style="text-align: left; color: #fff;
-    font-size: 23px;
+    font-size: 18px;
     line-height: 1.75;
     font-weight: 400;">No of Opening :- <?php echo $row['no_of_exp'] ?>
                     </p>
@@ -247,7 +248,7 @@ $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
                   <div class="title uppercase pb-26" style="text-align: left; padding-top: 30px;">
                     <span>Description </span>
                     <p style="text-align: left; color: #fff !important;
-    font-size: 23px;
+    font-size: 18px;
     line-height: 1.75;
     font-weight: 400;"><?php echo $row['description'] ?>
                     </p>
@@ -272,7 +273,7 @@ $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
 
 
               <div class="title uppercase  pb-26" style="text-align: left; padding-top: 30px;">
-                <span id="myBtn">UPLOAD RESUME
+                <span id="myBtn">Upload Resume
                 </span>
 
               </div>

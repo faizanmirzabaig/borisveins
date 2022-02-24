@@ -181,36 +181,36 @@ $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
       </h2>
       <div class="line line-on-center wow fadeIn" data-wow-delay=".7s"></div>
     </div>
-
-    <div class="container-fluid careers_extra_padding">
-
-      <?php
+    <?php
       if (mysqli_num_rows($result) > 0) {
         foreach ($result as $row) { ?>
+    <div class="container-fluid careers_extra_padding">
+
+     
           <div class="row dyanmic_assets dynamicheightrow">
-      
-          <div class="col-md-3 dynamicheight1" style="overflow-y: hidden;" >
+
+            <div class="col-md-3 dynamicheight1" style="overflow-y: hidden;">
               <div style="display: flex; align-items: center">
                 <div>
                   <img style="width: 72px; height: 72px" src="layouts/image/careers main backend/graphic.png" alt="" />
                 </div>
                 <div class="dynamicdiv" style="margin-left: 20px;">
-                <div class="title uppercase " style="text-align: left; padding-bottom: 17px;">
-                <span >Postion Name </span>
-                </div>
-                  <h4 style="font-size: 22px; color: #000">
+                  <div class="title uppercase " style="text-align: left; padding-bottom: 17px;">
+                    <span>Postion Name </span>
+                  </div>
+                  <h4 style="font-size: 16px; color: #000;text-align: center  ;" >
                     <?php echo $row['title'] ?>
 
 
                   </h4>
-                  <h5 style="color: #000; color: 18px"> <?php echo $row['posting'] ?></h5>
+                  <!-- <h4 style="color: #000; font-size;: 16px"> <?php echo $row['posting'] ?></h5> -->
                 </div>
               </div>
             </div>
 
-          
-           
-            <div class="col-md-3 dynamicheight2" style="overflow-y: hidden;">
+
+
+            <!-- <div class="col-md-3 dynamicheight2" style="overflow-y: hidden;">
             <span class="title uppercase " style="text-align: left; padding-bottom: 17px;">
                 <span>Job Description </span>
             </span>
@@ -220,57 +220,69 @@ $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
             ">
                 <?php echo $row['description'] ?>
               </span>
-            </div>
+            </div> -->
 
             <div class="col-md-4 dynamicheight3" style="overflow-y: hidden;">
-              
-              
+
+
               <div style="display: flex; align-items: center;flex-direction: row; justify-content: space-evenly; text-align: center;">
-            
-              <div>
-              <div class="title uppercase " style="text-align: center; padding-bottom: 17px;">
-                <span>Years of Experience</span>
-                </div>
-                <h5 style="color: #000;
-    font-size: 18px;
+
+                <div>
+                  <div class="title uppercase " style="text-align: center; padding-bottom: 17px;">
+                    <span>Years of Experience</span>
+                  </div>
+                  <h5 style="color: #000;
+    font-size: 16px;
     line-height: 24px;"><?php echo $row['no_of_exp'] ?></h5>
-              </div>
-              <div>
-              <div class="title uppercase " style="text-align: left; padding-bottom: 17px;">
-                <span>Job Location </span>
                 </div>
-                <h5 style="color: #000;
-    font-size: 18px;
+                <div>
+                  <div class="title uppercase " style="text-align: left; padding-bottom: 17px;">
+                    <span>Job Location </span>
+                  </div>
+                  <h5 style="color: #000;
+    font-size: 16px;
     line-height: 24px;"><?php echo $row['job_pos'] ?></h5>
-              </div>
+                </div>
               </div>
             </div>
 
 
-            <div class="col-md-2 admincol dynamicheight4" id="dynamicheight" style="overflow-y: hidden;"> 
-            <div class="title uppercase " style="text-align: center; padding-bottom: 17px;">
+            <div class="col-md-2 admincol dynamicheight4" id="dynamicheight" style="overflow-y: hidden;">
+              <div class="title uppercase " style="text-align: center; padding-bottom: 17px;">
                 <span>No of Position</span>
-                </div> 
+              </div>
               <div class="hiddendiv">
                 <div style="    margin-bottom: 6px;
               ">
-                 
+
                   <span class="block " style="color: #000;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 24px;"><?php echo $row['no_of_vacancy'] ?></span>
                 </div>
-                <div>
-                  <a href="view.php" class="button button-red"> View </a>
-                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="col-md-2 admincol dynamicheight4" id="dynamicheight" style="overflow-y: hidden;">
+
+              <div>
+                <a href="view.php?careerId=<?php echo $row['Id'] ?>" class="button button-red" style="    padding: 6px 23px;     font-size: 17px;     letter-spacing: 3px;
+
+
+"> View </a>
               </div>
 
             </div>
 
           </div>
-      <?php
+
+    </div>
+<?php
         }
       } ?>
-    </div>
+</div>
   </section>
   <!-- </div> -->
 
@@ -510,29 +522,21 @@ $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
             </p>
             <div class="social-icons">
               <div class="sc-wrapper dir-row sc-size-32">
-              <ul class="sc-list">
-                    <li class="sc-item" title="linkedin">
-                      <a class="sc-link" href="https://www.linkedin.com/company/borisveins/"><i class="fab fa-linkedin sc-icon"></i></a>
-                    </li>
-                    <li class="sc-item" title="Facebook">
-                      <a
-                        class="sc-link"
-                        href="https://www.facebook.com/borisveins/"
-                        ><i class="fab fa-facebook-f sc-icon"></i
-                      ></a>
-                    </li>
-                  
-                    <li class="sc-item" title="instagram">
-                      <a
-                        class="sc-link"
-                        href="https://www.instagram.com/borisveins/"
-                        ><i class="fab fa-instagram sc-icon"></i
-                      ></a>
-                    </li>
-                    <li class="sc-item" title="twitter">
+                <ul class="sc-list">
+                  <li class="sc-item" title="linkedin">
+                    <a class="sc-link" href="https://www.linkedin.com/company/borisveins/"><i class="fab fa-linkedin sc-icon"></i></a>
+                  </li>
+                  <li class="sc-item" title="Facebook">
+                    <a class="sc-link" href="https://www.facebook.com/borisveins/"><i class="fab fa-facebook-f sc-icon"></i></a>
+                  </li>
+
+                  <li class="sc-item" title="instagram">
+                    <a class="sc-link" href="https://www.instagram.com/borisveins/"><i class="fab fa-instagram sc-icon"></i></a>
+                  </li>
+                  <li class="sc-item" title="twitter">
                     <a class="sc-link" href="https://twitter.com/boris_veins"><i class="fab fa-twitter sc-icon"></i></a>
                   </li>
-                  </ul>
+                </ul>
               </div>
             </div>
           </div>
@@ -648,10 +652,10 @@ $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
   </div>
   <!-- End back-to-top Component-->
   <script>
-    let dynamicheight=document.getElementById('dynamicheight');
-    if (dynamicheight.style.maxHeight='303px') {
+    let dynamicheight = document.getElementById('dynamicheight');
+    if (dynamicheight.style.maxHeight = '303px') {
       // dynamicheight.style.overflowY='scroll';
-      
+
     }
   </script>
 
