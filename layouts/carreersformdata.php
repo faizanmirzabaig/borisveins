@@ -25,18 +25,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $no_of_vacancy = $_POST['no_of_vacancy'];
 
     $description = $_POST['description'];
-
-    $Job_Desc_title = $_POST['Job_Desc_title'];
-
+    
     $Job_Desc = $_POST['Job_Desc'];
 
-    $Bene_title = $_POST['Bene_title'];
+    // $Job_Desc_title = $_POST['Job_Desc_title'];
 
-    $Bene_Desc = $_POST['Bene_Desc'];
+    // $Bene_title = $_POST['Bene_title'];
 
-    $Job_Req_title = $_POST['Job_Req_title'];
+    // $Bene_Desc = $_POST['Bene_Desc'];
 
-    $Job_Req_Desc = $_POST['Job_Req_Desc'];
+    // $Job_Req_title = $_POST['Job_Req_title'];
+
+    // $Job_Req_Desc = $_POST['Job_Req_Desc'];
 
 
 
@@ -46,9 +46,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         // Submit these to a database
         // Sql query to be executed 
-        $sql = "INSERT INTO `careerss` (`title`,`posting`,`job_pos`,`no_of_exp`,`no_of_vacancy`,`description`,`Job_Desc_title`,`Job_Desc`,`Bene_title`,`Bene_Desc`,`Job_Req_title`,`Job_Req_Desc`) VALUES('$title','$posting', '$Job_Location','$Experience_Req','$no_of_vacancy','$description','$Job_Desc_title','$Job_Desc','$Bene_title','$Bene_Desc','$Job_Req_title','$Job_Req_Desc');";
+        $sql = "INSERT INTO `careerss` (`title`,`posting`,`job_pos`,`no_of_exp`,`no_of_vacancy`,`description`,`Job_Desc`) VALUES('$title','$posting', '$Job_Location','$Experience_Req','$no_of_vacancy','$description','$Job_Desc');";
       $result = mysqli_query($conn, $sql);
-        // header("Location:$base_url/layouts/carreerspage.php");  
+        header("Location:$base_url/layouts/carreerspage.php");  
   
     }
 }

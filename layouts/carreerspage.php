@@ -221,64 +221,64 @@ $result = $conn->query("SELECT * from careerss");
                                                             <div class="col-md-4">
                                                                 <div class="form-group">
                                                                     <label for="title">Job Position</label>
-                                                                    <input type="text" name="title" id="title" class="form-control" value="" placeholder="Job Position" required>
+                                                                    <input type="text" maxlength="101" name="title" id="title" class="form-control" value="" placeholder="Job Position" required>
                                                                 </div>
                                                             </div>
 
                                                             <div class="col-md-4">
                                                                 <div class="form-group">
                                                                     <label for="posting">Job Short Details</label>
-                                                                    <input type="text" name="posting" id="posting" class="form-control" value="" placeholder="Enter Post" required>
+                                                                    <input type="text" maxlength="101" name="posting" id="posting" class="form-control" value="" placeholder="Enter Post" required>
                                                                 </div>
                                                             </div>
 
                                                             <div class="col-md-4">
                                                                 <div class="form-group">
                                                                     <label for="no_of_vacancy">Job Location</label>
-                                                                    <input type="text" name="Job_Location" id="no_of_vacancy" class="form-control" placeholder="Job Location" required>
+                                                                    <input type="text" maxlength="101" name="Job_Location" id="no_of_vacancy" class="form-control" placeholder="Job Location" required>
                                                                 </div>
                                                             </div>
 
                                                             <div class="col-md-4">
                                                                 <div class="form-group">
                                                                     <label for="no_of_vacancy">Year of Experience Required</label>
-                                                                    <input type="text" name="Experience_Req" id="no_of_vacancy" class="form-control"  placeholder="Year of Experience Required" required>
+                                                                    <input type="text" maxlength="101" name="Experience_Req" id="no_of_vacancy" class="form-control"  placeholder="Year of Experience Required" required>
                                                                 </div>
                                                             </div>
 
                                                             <div class="col-md-4">
                                                                 <div class="form-group">
                                                                     <label for="no_of_vacancy">No of Opening</label>
-                                                                    <input type="text" name="no_of_vacancy" id="no_of_vacancy" class="form-control"  placeholder="Enter No of Opening"  required>
+                                                                    <input type="text" maxlength="101" name="no_of_vacancy" id="no_of_vacancy" class="form-control"  placeholder="Enter No of Opening"  required>
                                                                 </div>
                                                             </div>
                                                           
 
                                                             <div class="col-md-12">
                                                                 <div class="form-group">
-                                                                    <label for="description">Description</label>
-                                                                    <textarea name="description" id="description" class="form-control summernote" rows="5" placeholder="Write Something here..." required></textarea>
+                                                                    <label for="description">Front Description</label>
+                                                                    <textarea name="description" maxlength="101" id="description" class="form-control " rows="5" placeholder="Write Something here..." required></textarea>
                                                                 </div>
                                                             </div>
 
-                                                            <div class="col-md-12">
+                                                            <!-- <div class="col-md-12">
                                                         <h1 class="careers_details_si">Views Details</h1>
-                                                            </div>
+                                                            </div> -->
 
-                                                            <div class="col-md-12">
+                                                            <!-- <div class="col-md-12">
                                                                 <div class="form-group">
                                                                     <label for="title">Job Description Title</label>
                                                                     <input type="text" name="Job_Desc_title" id="title" class="form-control" value="" placeholder="Enter Title" required>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-md-12">
+                                                            </div> -->
+                                                            <!-- <div class="col-md-12">
                                                                 <div class="form-group">
                                                                     <label for="description">Job Description</label>
                                                                     <textarea name="Job_Desc" id="description" class="form-control summernote" rows="5" placeholder="Write Something here..." required></textarea>
                                                                 </div>
-                                                            </div>
+                                                            </div> -->
 
-                                                            <div class="col-md-12">
+                                                            <!-- <div class="col-md-12">
                                                                 <div class="form-group">
                                                                     <label for="posting">Benefits Description <Title></Title></label>
                                                                     <input type="text" name="Bene_title" id="posting" class="form-control" value="" placeholder="Enter Post" required>
@@ -303,7 +303,7 @@ $result = $conn->query("SELECT * from careerss");
                                                                     <label for="description">Job Requiremnts Description</label>
                                                                     <textarea name="Job_Req_Desc" id="description" class="form-control summernote" rows="5" placeholder="Write Something here..." required></textarea>
                                                                 </div>
-                                                            </div>
+                                                            </div> -->
 
 
                                                         </div>
@@ -349,17 +349,20 @@ $result = $conn->query("SELECT * from careerss");
                                                             <th>Job Short Details</th>
                                                             <th>Job Location</th>
                                                             <th>Years of Experience</th>
-                                                            <th>No of Opening</th>
                                                             <th>Description</th>
-                                                            <th>Job Description Title</th>
-                                                            <th>Job Description </th>
-                                                            <th>Benefits Title </th>
-                                                            <th>Benefits Description </th>
-                                                            <th>Job Requirements </th>
-                                                            <th>Job Requirements Description </th>
+                                                            <th>No of Opening</th>
+                                                           
                                                             <th>Status</th>
                                                             <th>Added On</th>
                                                             <th>Action</th>
+
+
+                                                            <!-- <th>Job Description </th> -->
+                                                            <!-- <th>Job Description Title</th> -->
+                                                            <!-- <th>Benefits Title </th>
+                                                            <th>Benefits Description </th>
+                                                            <th>Job Requirements </th>
+                                                            <th>Job Requirements Description </th> -->
                                                            
                                                         </tr>
                                                     </thead>
@@ -371,17 +374,18 @@ $result = $conn->query("SELECT * from careerss");
                                                                 <td> <?php echo $row['posting']; ?> </td>
                                                                 <td><?php echo $row['job_pos']; ?></td>
                                                                 <td><?php echo $row['no_of_exp']; ?></td>
-                                                                <td><?php echo $row['no_of_vacancy']; ?></td>
                                                                 <td><?php echo $row['description']; ?></td>
-                                                                <td><?php echo $row['Job_Desc_title']; ?></td>
-                                                                <td><?php echo $row['Job_Desc']; ?></td>
-                                                                <td><?php echo $row['Bene_title']; ?></td>
+                                                                <td><?php echo $row['no_of_vacancy']; ?></td>
+                                                                <td><?php echo $row['created_at']; ?></td>
+                                                                <td><?php echo $row['status']==0 ? 'Deactivated':'Activated'?></td>
+                                                                
+                                                                
+                                                                    <!-- <td><?php echo $row['Job_Desc_title']; ?></td> 
+                                                                <td><?php echo $row['Job_Desc']; ?></td> 
+                                                                 <td><?php echo $row['Bene_title']; ?></td>
                                                                 <td><?php echo $row['Bene_Desc']; ?></td>
                                                                 <td><?php echo $row['Job_Req_title']; ?></td>
-                                                                <td><?php echo $row['Job_Req_Desc']; ?></td>
-                                                                <td><?php echo $row['status']==0 ? 'Deactivated':'Activated'?></td>
-                                                                <td><?php echo $row['created_at']; ?></td>
-                                                                                              
+                                                                <td><?php echo $row['Job_Req_Desc']; ?></td> -->
 
                                                                 <td>
                                                                     <div class="btn-group" style="display: flex;">
@@ -420,17 +424,18 @@ $result = $conn->query("SELECT * from careerss");
                                                             <th>Job Short Details</th>
                                                             <th>Job Location</th>
                                                             <th>Years of Experience</th>
-                                                            <th>No of Opening</th>
                                                             <th>Description</th>
-                                                            <th>Job Description Title</th>
-                                                            <th>Job Description </th>
-                                                            <th>Benefits Title </th>
-                                                            <th>Benefits Description </th>
-                                                            <th>Job Requirements </th>
-                                                            <th>Job Requirements Description </th>
+                                                            <th>No of Opening</th>
                                                             <th>Status</th>
                                                             <th>Added On</th>
-                                                            <th>Action</th>
+                                                            <th>Action</th>>
+                                                            <!-- <th>Job Description </th> -->
+                                                            <!-- <th>Job Description Title</th> -->
+                                                            <!-- <th>Benefits Title </th>
+                                                            <th>Benefits Description </th>
+                                                            <th>Job Requirements </th>
+                                                            <th>Job Requirements Description </th> -->
+                                                            
                                                         </tr>
                                                     </tfoot>
                                                 </table>

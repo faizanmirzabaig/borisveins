@@ -186,7 +186,7 @@ a.button:after {
   margin-bottom: 20px;
 }
 .uppercase {
-  text-transform: uppercase;
+  /* text-transform: capitalize; */
 }
 .area-title > h2, .border-title {
   border: 1px solid #525252;

@@ -138,7 +138,7 @@
 
 .data_asd .details h2 span {
   font-size: 0.4em;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 2px;
   color: #999;
 }
@@ -563,19 +563,19 @@ a.button:after {
 
 .dynamicheight1 {
   height: 160px;
-  overflow-y: auto; /* new stuff */
+  overflow-y: hidden !important; /* new stuff */
 }
 .dynamicheight2 {
   height: 160px;
-  overflow-y: auto; /* new stuff */
+  overflow-y: hidden !important; /* new stuff */
 }
 .dynamicheight3 {
   height: 160px;
-  overflow-y: auto; /* new stuff */
+  overflow-y: hidden !important; /* new stuff */
 }
 .dynamicheight4 {
   height: 160px;
-  overflow-y: auto; /* new stuff */
+  overflow-y: hidden !important; /* new stuff */
 }
 /* job details end here */
 
@@ -585,69 +585,69 @@ a.button:after {
 
 /* Carreers start here*/
 .dynamic_first {
-  display: flex;
-  align-items: center;
+  display: flex !important;
+  align-items: center !important;
 }
 .dynamic_first_img {
   width: 72px;
   height: 72px;
 }
 .dynamicdiv {
-  margin-left: 20px;
+  margin-left: 20px !important;
 }
 .uppercase {
-  text-align: left;
-  padding-bottom: 17px;
+  text-align: center !important;
+  padding-bottom: 17px !important;
 }
 .dynamic_H4 {
-  font-size: 22px;
-  color: #000;
+  font-size: 22px !important;
+  color: #000 !important;
 }
 .dynamic_H5 {
-  color: #000;
-  color: 18px;
+  color: #000 !important;
+  color: 18px !important;
 }
 
 
 .dynamicheight3 > div {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: space-between;
-  text-align: center;
+  display: flex !important;
+  align-items: center !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  text-align: center !important;
 }
 .dynamicheight3_div {
-    text-align: center; padding-bottom: 17px;
+    text-align: center !important; padding-bottom: 17px !important;
 }
 .dyanamicheight3_h5{
-    color: #000;
-      font-size: 18px;
-      line-height: 24px;
+    color: #000 !important;
+      font-size: 18px !important;
+      line-height: 24px !important;
 }
 .dynamicheight3_sdiv{
-    text-align: left; padding-bottom: 17px;
-    color: #000;
+    text-align: left !important;  padding-bottom: 17px !important;
+    color: #000 !important;
 
 }
 .dynamicheight2_span{
-    text-align: left; padding-bottom: 17px;
+    text-align: left !important; padding-bottom: 17px !important;
 }
 .dynamicheight3_h5{
-    color: #000;
-      font-size: 18px;
-      line-height: 24px;"
+    color: #000 !important;
+      font-size: 18px !important;
+      line-height: 24px !important;
 }
 
 .dynamicheight4_div{
-    text-align: center; padding-bottom: 17px;
+    text-align: center !important; padding-bottom: 17px !important;
 }
 .hiddendiv> h5{
-    margin-bottom: 6px;
+    margin-bottom: 6px !important;
 }
 .dynamicheight4_span{
-    color: #000;
-      font-size: 18px;
-      line-height: 24px;
+    color: #000 !important;
+      font-size: 18px !important;
+      line-height: 24px !important;
 }
 /* Carreers end here */
 

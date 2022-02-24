@@ -31,7 +31,7 @@ $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Borisveins | About Us 2</title>
+  <title>Borisveins | View</title>
 
   <!-- fav icon -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -189,53 +189,86 @@ $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
     <div class="overlay-bgabout parallax"></div>
 
     <div class="container applycontainer">
-    <?php
+      <?php
       if (mysqli_num_rows($result) > 0) {
         foreach ($result as $row) { ?>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="single-job-content">
-            <div class="area-title text-center">
-              <!-- <h2>You have almost finished</h2> -->
-     
-              <div class="title uppercase pt-70 pb-26" style="text-align: left;">
-                <span><?php echo $row['Job_Desc_title'] ?></span>
-              </div>
-              <div class="single-job-form">
-                <p style="color: #fff;">
-                <?php echo $row['Job_Desc'] ?>
-                </p>
-              </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="single-job-content">
+                <div class="area-title text-center">
+                  <!-- <h2>You have almost finished</h2> -->
 
-              <div class="title uppercase pb-26" style="text-align: left; padding-top: 30px;">
-                <span><?php echo $row['Bene_title'] ?></span>
-              </div>
-              <div class="single-job-form">
-                <p>
-                  <!-- <i class="fa fa-check check" aria-hidden="true"></i> -->
-                  <?php echo $row['Bene_Desc'] ?>
-                </p>
+                  <div class="single-job-form pt-70">
+                    <p style="text-align: left; color: #fff;
+    font-size: 23px;
+    line-height: 1.75;
+    font-weight: 400;">Job Postion :- <?php echo $row['title'] ?></p>
 
-         
-              </div>
+                    <p style="text-align: left; color: #fff;
+    font-size: 23px;
+    line-height: 1.75;
+    font-weight: 400;">Job Short Details :- <?php echo $row['posting'] ?>
+                    </p>
+                  </div>
 
 
-              <div class="title uppercase pb-26" style="text-align: left; padding-top: 30px;">
-                <span><?php echo $row['Job_Req_title'] ?>  </span>
+                  <div class="single-job-form">
+                    <p style="text-align: left; color: #fff;
+    font-size: 23px;
+    line-height: 1.75;
+    font-weight: 400;">Year of Experience Required :- <?php echo $row['no_of_exp'] ?>
+                    </p>
 
-               
-              </div>
-              <div class="single-job-form">
-                <p>
-                  <!-- <i class="apply_check">1 .</i> <span class="apply_check_pcolor"> -->
-                  <?php echo $row['Job_Req_Desc'] ?>
-                </p>
+                    <p style="text-align: left; color: #fff;
+    font-size: 23px;
+    line-height: 1.75;
+    font-weight: 400;">No of Opening :- <?php echo $row['no_of_exp'] ?>
+                    </p>
+                  </div>
 
-                
-              </div>
+
+                  <div class="single-job-form">
+                    <p style="text-align: left; color: #fff;
+    font-size: 23px;
+    line-height: 1.75;
+    font-weight: 400;">Year of Experience Required :- <?php echo $row['no_of_exp'] ?>
+                    </p>
+
+                    <p style="text-align: left; color: #fff;
+    font-size: 23px;
+    line-height: 1.75;
+    font-weight: 400;">No of Opening :- <?php echo $row['no_of_exp'] ?>
+                    </p>
+                  </div>
+
+
+
+
+                  <div class="title uppercase pb-26" style="text-align: left; padding-top: 30px;">
+                    <span>Description </span>
+                    <p style="text-align: left; color: #fff !important;
+    font-size: 23px;
+    line-height: 1.75;
+    font-weight: 400;"><?php echo $row['description'] ?>
+                    </p>
+
+
+                  </div>
+
+
+                  <div class="single-job-form">
+                    <p>
+                      <!-- <i class="apply_check">1 .</i> <span class="apply_check_pcolor"> -->
+                      <?php echo $row['Job_Req_Desc'] ?>
+                    </p>
+
+
+                  </div>
+
+
               <?php
-        }
-      } ?>
+            }
+          } ?>
 
 
               <div class="title uppercase  pb-26" style="text-align: left; padding-top: 30px;">
@@ -245,10 +278,10 @@ $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
               </div>
 
 
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -257,93 +290,93 @@ $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
     <!-- Modal content -->
     <div class="modal-content">
       <div class="modal-header">
-        <h2 >Apply Jobs </h2>
+        <h2>Apply Jobs </h2>
         <span class="close">&times;</span>
       </div>
       <!-- modal-body  start here -->
       <div class="modal-body">
         <form action="uploadresume.php" method="POST" enctype="multipart/form-data">
-        <div class="row">
-          <div class="col-sm-6">
-            <label>
-              Your Name (required)
-              <br>
-              <span class="wpcf7-form-control-wrap your-name">
-                <input type="text" placeholder="Enter Your Name" name="name" value size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" required>
-              </span>
-            </label>
-          </div>
-          <div class="col-sm-6">
-            <label>
-              Your Experience
-              <br>
-              <span class="wpcf7-form-control-wrap your-name">
-                <input type="text" name="experience" placeholder="Enter Your Experience" value size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" required>
-              </span>
-            </label>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-sm-6">
-            <label>
-              Contact Number (required)
-              <br>
-              <span class="wpcf7-form-control-wrap your-name">
-                <input type="tel" name="contact" value size="40" placeholder="Enter Your Contact" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" required>
-              </span>
-            </label>
-          </div>
-          <div class="col-sm-6">
-            <label>
-              Your Email
-              <br>
-              <span class="wpcf7-form-control-wrap your-name">
-                <input type="email" name="email" value size="40" placeholder="Enter Your Email" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" required>
-
-              </span>
-            </label>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-sm-12">
-            <label>
-              Your Message
-              <br>
-              <span class="wpcf7-form-control-wrap your-name">
-                <textarea name="message" cols="40" rows="5" placeholder="Enter Your Message" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Your cover letter/message to send to the employer" required></textarea>
-              </span>
-            </label>
+          <div class="row">
+            <div class="col-sm-6">
+              <label>
+                Your Name (required)
+                <br>
+                <span class="wpcf7-form-control-wrap your-name">
+                  <input type="text" placeholder="Enter Your Name" name="name" value size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" required>
+                </span>
+              </label>
+            </div>
+            <div class="col-sm-6">
+              <label>
+                Your Experience
+                <br>
+                <span class="wpcf7-form-control-wrap your-name">
+                  <input type="text" name="experience" placeholder="Enter Your Experience" value size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" required>
+                </span>
+              </label>
+            </div>
           </div>
 
-        </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <label>
+                Contact Number (required)
+                <br>
+                <span class="wpcf7-form-control-wrap your-name">
+                  <input type="tel" name="contact" value size="40" placeholder="Enter Your Contact" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" required>
+                </span>
+              </label>
+            </div>
+            <div class="col-sm-6">
+              <label>
+                Your Email
+                <br>
+                <span class="wpcf7-form-control-wrap your-name">
+                  <input type="email" name="email" value size="40" placeholder="Enter Your Email" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" required>
 
-        <div class="row">
-          <div class="col-sm-12">
-            <label>
-              Upload Resume
-              <br>
-              <span class="wpcf7-form-control-wrap your-name">
-                <input type="file" name="resume" style="outline: unset !important;border: unset !important; margin-top: 10px;" required>
-              </span>
-            </label>
+                </span>
+              </label>
+            </div>
           </div>
 
-        </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <label>
+                Your Message
+                <br>
+                <span class="wpcf7-form-control-wrap your-name">
+                  <textarea name="message" cols="40" rows="5" placeholder="Enter Your Message" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Your cover letter/message to send to the employer" required></textarea>
+                </span>
+              </label>
+            </div>
 
-        <div class="row"  style="margin-top:20px ;">
-          <div class="col-sm-12">
-            <input type="submit" value="Apply Now" class="wpcf7-form-control wpcf7-submit formbtn">
           </div>
 
-        </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <label>
+                Upload Resume
+                <br>
+                <span class="wpcf7-form-control-wrap your-name">
+                  <input type="file" name="resume" style="outline: unset !important;border: unset !important; margin-top: 10px;" required>
+                </span>
+              </label>
+            </div>
+
+          </div>
+
+          <div class="row" style="margin-top:20px ;">
+            <div class="col-sm-12">
+              <input type="submit" value="Apply Now" class="wpcf7-form-control wpcf7-submit formbtn">
+            </div>
+
+          </div>
         </form>
 
       </div>
       <!-- modal-body  end here -->
 
-     
+
     </div>
 
   </div>
