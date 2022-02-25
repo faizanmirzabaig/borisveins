@@ -27,7 +27,13 @@
     </head>
 
 <body>
-
+<style>
+    ul{
+        list-style: disc !important;
+  list-style-position: inside !important; 
+  color: #000;
+    }
+</style>
     <div class="theme-loader">
         <div class="ball-scale">
             <div class='contain'>
@@ -219,8 +225,10 @@ if (mysqli_num_rows($result)>0){
     foreach ($result as $row){
 ?>
         <form method="post" class="form" enctype="multipart/form-data" action="updatecarreerspage.php">
-            <input type="hidden" name="_token" value="ac1efXHi3RdqdT9iZcYHltRCTkp9dmoZn4eyHk9E">            <div class="row">
-                <div class="col-md-6">
+            <input type="hidden" name="_token" value="ac1efXHi3RdqdT9iZcYHltRCTkp9dmoZn4eyHk9E">           
+           
+            <div class="row">
+            <div class="col-md-6">
                     <div class="form-group">
                         <label for="title">Position Name</label>
                         <input type="text" name="title"  id="title" class="form-control" value="<?php echo $row['title']?>"

@@ -184,10 +184,10 @@ $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
   <!-- Start  about Section-->
 
   <!-- almost complete start here -->
-  <section class="benefits" id="benefits" style="background-color: rgba(0,0,0,0.4) ;padding-top: 0px; z-index:unset;
+  <section class="benefits" id="benefits" style="background-color: #fff ;padding-top: 0px; z-index:unset;
        padding-bottom: 39px;
 ">
-    <div class="overlay-bgabout parallax"></div>
+    <!-- <div class="overlay-bgabout parallax"></div> -->
 
     <div class="container applycontainer">
       <?php
@@ -200,12 +200,12 @@ $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
                   <!-- <h2>You have almost finished</h2> -->
 
                   <div class="single-job-form pt-70">
-                    <p style="text-align: left; color: #fff;
+                    <p style="text-align: left; color: #000;
     font-size: 18px;
     line-height: 1.75;
     font-weight: 400;">Position Name :- <?php echo $row['title'] ?></p>
 
-                    <p style="text-align: left; color: #fff;
+                    <p style="text-align: left; color: #000;
     font-size: 18px;
     line-height: 1.75;
     font-weight: 400;">Job Location :- <?php echo $row['job_pos'] ?>
@@ -216,13 +216,13 @@ $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
 
 
                   <div class="single-job-form">
-                    <p style="text-align: left; color: #fff;
+                    <p style="text-align: left; color: #000;
     font-size: 18px;
     line-height: 1.75;
     font-weight: 400;">Year of Experience Required :- <?php echo $row['no_of_exp'] ?>
                     </p>
 
-                    <p style="text-align: left; color: #fff;
+                    <p style="text-align: left; color: #000;
     font-size: 18px;
     line-height: 1.75;
     font-weight: 400;">No of Opening :- <?php echo $row['no_of_vacancy'] ?>
@@ -234,7 +234,7 @@ $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
 
                   <div class="title uppercase pb-26" style="text-align: left; padding-top: 30px;">
                     <span>Description </span>
-                    <p style="text-align: left; color: #fff !important;
+                    <p style="text-align: left; color: #000 !important;
     font-size: 18px;
     line-height: 1.75;
     font-weight: 400;"><?php echo $row['description'] ?>
