@@ -577,6 +577,7 @@ a.button:after {
   height: 160px;
   overflow-y: hidden !important; /* new stuff */
 }
+
 /* job details end here */
 
 /*
@@ -609,13 +610,7 @@ a.button:after {
 }
 
 
-.dynamicheight3 > div {
-  display: flex !important;
-  align-items: center !important;
-  flex-direction: row !important;
-  justify-content: space-between !important;
-  text-align: center !important;
-}
+
 .dynamicheight3_div {
     text-align: center !important; padding-bottom: 17px !important;
 }
@@ -759,15 +754,30 @@ a.button:after {
   }
   .dynamicdiv {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
+    flex-direction: column;
+    flex-direction: column;
+    /* align-items: center; */
+  }
+  .dynamicheight3_firstdiv{
+    flex-direction: column !important;
+  }
+  .dynamic_divfir_h4{
+    text-align: center !important;
+    margin-bottom: 20px;
+  }
+  .dynamic_divfir_div{
+    text-align: center !important;
+    margin-top: 10px;
+    
   }
   .arrangement_desc {
     text-align: center;
   }
   .hiddendiv {
     flex-direction: row;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     padding: 0px 0px 0px 18px;
   }
   .apply_check {
@@ -777,6 +787,42 @@ a.button:after {
     padding-left: 0px !important;
     padding-right: 0px !important;
   }
+  .dyanamicheight1_firstdiv{
+    flex-direction: column !important;
+
+  }
+  .dynamicheight3_firstdiv_div{
+    text-align: center !important;
+    margin-top: 20px;
+  }
+
+    
+  .title > span{
+width: 100%;
+  }
+  .dynamicdivs{
+width: 100%;
+padding-left: 20px ;
+    padding-right: 20px;
+  }
+  .dynamicdiv{
+    margin-left: 0px !important;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .dynamicheight3 {
+    height: 218px;
+    overflow-y: hidden !important;
+}
+.dynamic_divMar{
+  margin-bottom: 20px;
+}
+
+ .dynamicheight4{
+  max-height: 103px !important;
+
+ }
+  
 }
 
 @media (max-width: 580px) {
@@ -804,9 +850,7 @@ a.button:after {
   .overlay-color-services1 {
     height: 2950px;
   }
-  .dynamicdiv{
-    flex-direction: column;     
-}
+
  
 }
 @media (max-width: 485px) {

@@ -190,15 +190,15 @@ $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
           <div class="row dyanmic_assets dynamicheightrow">
 
             <div class="col-md-3 dynamicheight1" style="overflow-y: hidden;">
-              <div style="display: flex; align-items: center">
+              <div class="dyanamicheight1_firstdiv" style="display: flex; align-items: center">
                 <div>
-                  <img style="width: 72px; height: 72px" src="layouts/image/careers main backend/graphic.png" alt="" />
+                  <img style="width: 72px; height: 72px" src="layouts/image/careers main backend/graphic2.png" alt="" />
                 </div>
-                <div class="dynamicdiv" style="margin-left: 20px;">
-                  <div class="title uppercase " style="text-align: left; padding-bottom: 17px;">
+                <div class="dynamicdiv" style="margin-left: 20px; text-align: left;">
+                  <div class="title uppercase dynamic_divfir_div" style=" padding-bottom: 17px;">
                     <span>Position Name </span>
                   </div>
-                  <h4 style="font-size: 16px; color: #000;text-align: center  ;" >
+                  <h4 class="dynamic_divfir_h4" style="font-size: 16px; color: #000; text-align: left;" >
                     <?php echo $row['title'] ?>
 
 
@@ -210,32 +210,22 @@ $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
 
 
 
-            <!-- <div class="col-md-3 dynamicheight2" style="overflow-y: hidden;">
-            <span class="title uppercase " style="text-align: left; padding-bottom: 17px;">
-                <span>Job Description </span>
-            </span>
-
-              <span class=" block arrangement_desc" style="    color: #000; display: block;  margin: 16px 0 0px 0px;
-
-            ">
-                <?php echo $row['description'] ?>
-              </span>
-            </div> -->
+           
 
             <div class="col-md-4 dynamicheight3" style="overflow-y: hidden;">
 
 
-              <div style="display: flex; align-items: center;flex-direction: row; justify-content: space-evenly; text-align: center;">
-              <div>
-                  <div class="title uppercase " style="text-align: left; padding-bottom: 17px;">
+              <div class="dynamicheight3_firstdiv" style="display: flex; align-items: center;flex-direction: row; justify-content: space-evenly; text-align: center;">
+              <div class="dynamicdivs">
+                  <div class="title uppercase dynamicheight3_firstdiv_div" style="text-align: left; padding-bottom: 17px;">
                     <span>Job Location </span>
                   </div>
-                  <h5 style="color: #000;
+                  <h5 class="dynamic_divMar" style="color: #000;
     font-size: 16px;
     line-height: 24px;"><?php echo $row['job_pos'] ?></h5>
                 </div>
 
-                <div>
+                <div class="dynamicdivs">
                   <div class="title uppercase " style="text-align: center; padding-bottom: 17px;">
                     <span>Years of Experience</span>
                   </div>
@@ -249,7 +239,7 @@ $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
 
 
             <div class="col-md-2 admincol dynamicheight4" id="dynamicheight" style="overflow-y: hidden;">
-              <div class="title uppercase " style="text-align: center; padding-bottom: 17px;">
+              <div class="title uppercase dynamicdivs " style="text-align: center; padding-bottom: 17px;">
                 <span>No of Position</span>
               </div>
               <div class="hiddendiv">
@@ -269,10 +259,12 @@ $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
             <div class="col-md-2 admincol dynamicheight4" id="dynamicheight" style="overflow-y: hidden;">
 
               <div>
-                <a href="view.php?careerId=<?php echo $row['Id'] ?>" class="button button-red" style="    padding: 6px 23px;     font-size: 17px;     letter-spacing: 3px;
+                <a href="view.php?careerId=<?php echo $row['Id'] ?>" class="button button-red" style="    padding: 6px 23px;     font-size: 17px;     letter-spacing: 3px; font-family:'Open Sans', sans-serif;    background: #F15B65;
+
+;
 
 
-"> Description </a>
+"> View </a>
               </div>
 
             </div>
