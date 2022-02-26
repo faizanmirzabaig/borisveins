@@ -71,7 +71,7 @@ $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
 
 </head>
 
-<body class="dark-theme rounded-btns" style="background-color: #121212;">
+<body class="rounded-btns" style="background-color: #121212;">
   <!--Start Page Header-->
   <header class="page-header dark-header menu-on-end header-basic" id="page-header">
     <div class="header-search-box">
@@ -276,10 +276,10 @@ $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
   <div id="myModal" class="modal">
 
     <!-- Modal content -->
-    <div class="modal-content">
+    <div class="modal-content modal-content_width">
       <div class="modal-header">
         <h2>Apply Jobs </h2>
-        <span class="close">&times;</span>
+        <span style="color: #000;" class="close">&times;</span>
       </div>
       <!-- modal-body  start here -->
       <div class="modal-body">

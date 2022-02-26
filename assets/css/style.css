@@ -834,6 +834,10 @@ padding-left: 20px ;
     right: -0.7%;
     z-index: 9999900;
   }
+  .modal-content{
+    width: 91% !important;
+
+  }
  
 }
 @media (max-width: 530px) {

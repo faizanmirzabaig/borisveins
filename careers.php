@@ -39,7 +39,9 @@ $result = mysqli_query($conn, $sql) or die('query unsuccessfull');
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="icon" href="assets/Images/fav-icon/fav-icon.png" />
 
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- <link rel="stylesheet" href="assets/css/style.css" /> -->
+  <link rel="stylesheet" href="assets/css/style_car2.css" />
+
   <!-- bootstarp -->
   <link rel="stylesheet" href="assets/css/vendors/bootstrap.min.css" />
 
